@@ -106,6 +106,9 @@ jobs:
         run: cargo build --locked -p plugin-runtime --example inspect_package
       - name: Validate candidate catalog against reviewed records
         shell: pwsh
+        env:
+          # Only the trusted builder receives read-only API access; it never authenticates ZIP downloads.
+          GH_TOKEN: ${{ github.token }}
         run: |
           $arguments = @('trusted/marketplace.py', '--registry', 'incoming/registry', '--transfers', 'incoming/transfers', '--output', 'dist')
           if ('${{ github.event_name }}' -eq 'pull_request') {

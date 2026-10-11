@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import io
 import json
+import os
 import re
 import stat
 import subprocess
@@ -175,15 +176,34 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=(), baselin
     return {"schema": 1, "plugins": sorted(plugins, key=lambda p: p["id"])}
 
 
+class _GitHubApiRedirect(urllib.request.HTTPRedirectHandler):
+    """Keep authenticated metadata redirects within GitHub's HTTPS API origin."""
+
+    def redirect_request(self, request, response, code, message, headers, target):
+        destination = urllib.parse.urlsplit(target)
+        # urllib retains request headers on redirects, so reject a new origin before it is contacted.
+        require(destination.scheme == "https" and destination.netloc == "api.github.com",
+                "GitHub API redirect left trusted origin")
+        return super().redirect_request(request, response, code, message, headers, target)
+
+
 def fetch_github(url):
-    """Read public GitHub resources only, bounded, with no credentials sent to assets."""
-    request = urllib.request.Request(url, headers={"User-Agent": "Nanobug-Plugin-Marketplace",
-                                                "Accept": "application/vnd.github+json"})
-    with urllib.request.urlopen(request, timeout=30) as response:
+    """Read bounded public metadata or ZIP bytes; GH_TOKEN is used only on the exact API origin."""
+    destination = urllib.parse.urlsplit(url)
+    metadata = destination.scheme == "https" and destination.netloc == "api.github.com"
+    headers = {"User-Agent": "Nanobug-Plugin-Marketplace",
+               "Accept": "application/vnd.github+json"}
+    # Actions supplies its read-only token to trusted code; plugin assets and their CDN redirects never receive it.
+    if metadata and (token := os.environ.get("GH_TOKEN")):
+        headers["Authorization"] = "Bearer " + token
+    request = urllib.request.Request(url, headers=headers)
+    open_request = (urllib.request.build_opener(_GitHubApiRedirect()).open
+                    if metadata else urllib.request.urlopen)
+    with open_request(request, timeout=30) as response:
         require(response.url.startswith("https://"), "HTTPS redirect required")
         payload = response.read(MAX_PACKAGE + 1)
     require(len(payload) <= MAX_PACKAGE, "response too large")
-    return json.loads(payload) if url.startswith("https://api.github.com/") else payload
+    return json.loads(payload) if metadata else payload
 
 
 def main():
