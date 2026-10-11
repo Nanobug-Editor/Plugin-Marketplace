@@ -4,6 +4,8 @@
 
 父规格：[GitHub #1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1) / [本地执行规格](../specs/plugin-marketplace.md)。原 [Nanobug #100](https://github.com/T-miracle/Nanobug/issues/100) 仅供追溯，不修改或关闭；新仓库父规格亦不因拆单而关闭。
 
+2026-10-11 已核对宿主 `1bfc4cf10b3a67edb43f4f01003f1c6e2592cec2` 与市场 `7e134fa19f2c34d076b265e50dcd478e028663f0` 普通推送结果，随后关闭并读回 #2、#4 为 completed；#3 已关闭，#5 与父规格 #1 继续开启。收录 PR #6 已按用户对本批七个本地插件的明确授权合并；该授权不扩展到未来或第三方候选。最终交付复核 Standards 0、Spec 0 个阻塞项，实际线上消费覆盖正式目录、Release ZIP 校验/安装与统计；独立第三方作者没有参与本次首批验收。
+
 ## GitHub 发布结果
 
 | 本地编号 | GitHub 议题 | 原生阻塞项 |

@@ -14,7 +14,8 @@
     "number": 1,
     "body_verified": true
   },
-  "ticket_status": "published-not-started",
+  "ticket_status": "01-02-03-delivered-04-in-progress",
+  "state_readback_at": "2026-10-11T08:11:27Z",
   "test_seam_status": "approved",
   "tickets": [
     {
@@ -26,7 +27,7 @@
       "number": 2,
       "id": 5780918778,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/2",
-      "state": "open",
+      "state": "closed",
       "labels": [
         "ready-for-agent"
       ],
@@ -43,7 +44,7 @@
       "number": 3,
       "id": 5780919182,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3",
-      "state": "open",
+      "state": "closed",
       "labels": [
         "ready-for-agent"
       ],
@@ -60,7 +61,7 @@
       "number": 4,
       "id": 5780919898,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4",
-      "state": "open",
+      "state": "closed",
       "labels": [
         "ready-for-agent"
       ],
