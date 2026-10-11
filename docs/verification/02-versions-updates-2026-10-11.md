@@ -1,6 +1,6 @@
 # 工单 02：历史版本、统计与安全升级验证
 
-日期：2026-10-11。状态：实现与验证进行中，未关闭 [#3](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3)。用户已明确要求依序执行全部剩余工单。生产目录按此前决定保持为空，受控测试包不发布。
+日期：2026-10-11。状态：实现、验证及普通推送完成，对应 [#3](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3)。用户已明确要求依序执行全部剩余工单。生产目录按此前决定保持为空，受控测试包不发布。
 
 ## 工作树和实现
 
@@ -22,6 +22,10 @@
 
 Standards 与 Spec 双轴复查均无未修复阻断。修正了上游取消按钮外观、双重网络故障覆盖统计、已装撤回插件出现在默认发现及跨插件残留版本选择；兼容原因改为结构化分类。
 
-实际 WASM 首装和新增权限确认已通过；迁移/激活失败、受影响本地导入最终回归及远程交付仍在执行，完成后记录真实结果。尚未把跳过的 ignored 测试或编译成功计为原生验收。
+实际 WASM 已显式执行：`cargo test -p editor-app market -- --ignored --nocapture --test-threads=1`，3 passed / 0 ignored，419.55 秒。包括真实首次安装、新增权限取消/确认、迁移写入后失败及激活失败的原版/数据恢复，以及成功升级后的 `workspace|v2:original` 可观察结果。受管工作区文件未被修改。夹具通过宿主 `--plugin-package` 和 `tests.export_wasm_fixture` 生成；ZIP SHA-256 为 `6228ee43d31af039f9dff2483f331f046ff37b70b11de6f3ff49c1258505421a`。
+
+工具链为 Rust/Cargo 1.98.1、Windows x86_64 MSVC。最终普通市场 7 passed / 3 ignored、本地导入 2 passed；其中 3 项 ignored 已独立显式通过。市场代码已提交并推送 `0207f790756affaf6a53ec8378d0ace906ae25a9`；[Actions 38113186261](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/actions/runs/38113186261) 已成功。线上 `catalog.json` 仍为 schema 1 空目录；`stats.json` 为 schema 1 空统计，测量时间 `2026-10-11T04:57:13Z`。
+
+宿主提交 `2cdc683118b7798add6436eaca3fe9a0e07e3056` 已普通推送并核对 `origin/main` 和 `origin/codex/marketplace-versions`。隔离工作树保持干净，主工作区未改写；不将其他 181 项 ignored 计为通过。
 
 真实第三方首批插件仍未提供；后续官方包的 Pages/Release 安装由 03 衔接。GPUI 测试使用真实原生布局与输入事件；不等同于人工操作系统 IME 候选窗口验收。macOS/Linux 未实测。

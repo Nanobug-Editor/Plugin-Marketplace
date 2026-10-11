@@ -1,6 +1,6 @@
 # 02：历史版本、下载统计与安全升级提示
 
-状态：实施与验证中，已发布为 [#3](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3)；[验收记录](../verification/02-versions-updates-2026-10-11.md)保存实际结果及未完成项。稳定标识：`plugin-marketplace-v1-02`。
+状态：2026-10-11 已实现、验证并推送，发布为 [#3](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3)；[验收记录](../verification/02-versions-updates-2026-10-11.md)保存命令、提交和平台限制。稳定标识：`plugin-marketplace-v1-02`。
 
 ## Parent
 
