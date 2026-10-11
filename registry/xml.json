@@ -1,0 +1,24 @@
+{
+  "id": "xml",
+  "repository": "T-miracle/Nanobug-Plugin-XML",
+  "maintainers": [
+    "T-miracle"
+  ],
+  "summary": "XML highlighting, completion, formatting, schema assistance and document structure.",
+  "category": "languages",
+  "tags": [
+    "xml",
+    "language"
+  ],
+  "versions": [
+    {
+      "version": "0.2.2",
+      "commit": "69749e0d37ca28571e39101678f77a051a939ca8",
+      "tag": "v0.2.2",
+      "asset": "xml-0.2.2.zip",
+      "published_at": "2026-10-11T06:41:27Z",
+      "changelog": "# XML 0.2.2\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `xml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `69749e0d37ca28571e39101678f77a051a939ca8`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "sha256": "c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a"
+    }
+  ]
+}

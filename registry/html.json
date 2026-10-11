@@ -1,0 +1,24 @@
+{
+  "id": "html",
+  "repository": "T-miracle/Nanobug-Plugin-HTML",
+  "maintainers": [
+    "T-miracle"
+  ],
+  "summary": "HTML recognition, highlighting, completion, formatting and paired tag editing.",
+  "category": "languages",
+  "tags": [
+    "html",
+    "language"
+  ],
+  "versions": [
+    {
+      "version": "0.3.1",
+      "commit": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce",
+      "tag": "v0.3.1",
+      "asset": "html-0.3.1.zip",
+      "published_at": "2026-10-11T06:38:16Z",
+      "changelog": "# HTML 0.3.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `html`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `68b8c7baabd0790cba884aa19e4f2523b2b2e7ce`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "sha256": "6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e"
+    }
+  ]
+}

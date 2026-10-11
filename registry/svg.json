@@ -1,0 +1,24 @@
+{
+  "id": "svg",
+  "repository": "T-miracle/Nanobug-Plugin-Image",
+  "maintainers": [
+    "T-miracle"
+  ],
+  "summary": "Native SVG source preview and PNG, JPEG, GIF and WebP image display.",
+  "category": "media",
+  "tags": [
+    "svg",
+    "images"
+  ],
+  "versions": [
+    {
+      "version": "0.6.1",
+      "commit": "cac09895b6bc9cd227a6e318edb8c868da41084e",
+      "tag": "v0.6.1",
+      "asset": "svg-0.6.1.zip",
+      "published_at": "2026-10-11T06:40:40Z",
+      "changelog": "# Image 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `svg`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `cac09895b6bc9cd227a6e318edb8c868da41084e`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "sha256": "911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654"
+    }
+  ]
+}

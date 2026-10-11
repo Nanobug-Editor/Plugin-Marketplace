@@ -1,0 +1,24 @@
+{
+  "id": "toml",
+  "repository": "T-miracle/Nanobug-Plugin-TOML",
+  "maintainers": [
+    "T-miracle"
+  ],
+  "summary": "TOML recognition, highlighting and file icons.",
+  "category": "languages",
+  "tags": [
+    "toml",
+    "language"
+  ],
+  "versions": [
+    {
+      "version": "0.2.3",
+      "commit": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2",
+      "tag": "v0.2.3",
+      "asset": "toml-0.2.3.zip",
+      "published_at": "2026-10-11T06:41:19Z",
+      "changelog": "# TOML 0.2.3\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `toml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `a1a4677118403ac01e6a0fd2f667cfa788aa9bd2`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "sha256": "2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed"
+    }
+  ]
+}
