@@ -1,12 +1,12 @@
 # 初版插件市场：工单与测试安排
 
-日期：2026-10-09；执行状态更新于 2026-10-11。用户已要求按顺序执行全部剩余工单。01 的首次安装链路已由首批真实官方候选完成正式非空验收；02 已实现、验证并推送；03 的七个新命名仓库、Release、原生安装、代表行为及正式 Pages/统计/客户端线上消费已交付。04 的源码迁出、固定测试输入及无随附 Windows 载荷已实施并推送为[宿主草稿 PR #101](https://github.com/T-miracle/Nanobug/pull/101)；37 项基线失败、图像组稳定性和人工 OS IME 仍待处理，工单保持 open。实际结果见各单 verification。
+日期：2026-10-09；执行状态更新于北京时间 2026-10-12。用户已要求按顺序执行全部剩余工单。01 的审核收录与首次安装、02 的历史版本/统计/安全升级、03 的七个独立插件仓库/Release/正式市场、04 的源码迁出与无随附 Windows 交付均已完成。原 37 项失败及图像组稳定性已解决；[宿主 PR #101](https://github.com/T-miracle/Nanobug/pull/101)已合并，四张实施工单均已关闭。实际检查、历史证据和验证边界见各单 verification。
 
 父规格：[GitHub #1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1) / [本地执行规格](../specs/plugin-marketplace.md)。原 [Nanobug #100](https://github.com/T-miracle/Nanobug/issues/100) 仅供追溯，不修改或关闭；新仓库父规格亦不因拆单而关闭。
 
-2026-10-11 已核对宿主 `1bfc4cf10b3a67edb43f4f01003f1c6e2592cec2` 与市场 `7e134fa19f2c34d076b265e50dcd478e028663f0` 普通推送结果，随后关闭并读回 #2、#4 为 completed；#3 已关闭，#5 与父规格 #1 继续开启。收录 PR #6 已按用户对本批七个本地插件的明确授权合并；该授权不扩展到未来或第三方候选。最终交付复核 Standards 0、Spec 0 个阻塞项，实际线上消费覆盖正式目录、Release ZIP 校验/安装与统计；独立第三方作者没有参与本次首批验收。
+`2026-10-11T16:35:12Z` 已读回 #2、#3、#4、#5 均为 closed/completed，父规格 #1 与历史 Nanobug #100 保持 open。[发布记录](publication.json)保留实际 ID、依赖与关闭时间。首批七个本地插件的收录 PR #6 和 Markdown 0.17.2 的 PR #7 已审核合并，正式 Pages 发布成功；历史包 ID、版本、ZIP 名称与摘要不改写。该审核仅覆盖这些固定版本，独立第三方作者没有参与本次首批验收。
 
-04 的最新宿主候选为 `0b33b7f91971d883b44a35dd5240266bd6a52431`，已核对普通推送和 draft 状态。新实现的双轴审查问题已修复复核，但实际失败仍阻止完整验收；本句不继承 01–03 的“已完成”。证据见 [04 当前记录](../verification/04-unbundled-delivery-2026-10-11.md)及其链接的宿主详细记录。
+04 的最终测试代码为 `556658e065fa63abcf53404b1205e5e624009086`，最终证据提交为 `576606294cdcf678ade52673c86c1f7a23fc89b1`，宿主合并提交为 `4d172b97cbbf7aff2bbcd986116321e3566023b9`。应用含全部 ignored 为 686 项通过，runtime ignored 连续 188 项通过，非 UI workspace 为 238 passed / 188 ignored；最终六阶段 Windows 安装交付及 40 文件数据保留通过。双轴最终复核无未解决规范违规或规格缺漏。证据见 [04 最终记录](../verification/04-unbundled-delivery-2026-10-11.md)；物理 OS IME 候选窗口、macOS/Linux、签名和公证未验证。
 
 ## GitHub 发布结果
 

@@ -4,7 +4,7 @@
 
 Nanobug 官方插件注册表与分发项目，英文名为 Nanobug-Plugin-Marketplace。
 
-工单 01 实现审核注册表发布及原生首次安装。工单 02 新增历史版本、独立下载统计和用户触发的安全升级；实际检查及未完成验收见[记录](docs/verification/02-versions-updates-2026-10-11.md)。正式插件迁移与无随附发行属于工单 03–04。
+工单 01–04 已实现并通过验收：审核后的原生安装、历史版本与安全升级、七个官方插件独立发布，以及无随附 Windows 交付。[工单目录](docs/tickets/README.md)链接交付记录与真实 GitHub 状态；[最终 Windows 记录](docs/verification/04-unbundled-delivery-2026-10-11.md)说明实测范围与其他平台限制。
 
 ## 范围
 

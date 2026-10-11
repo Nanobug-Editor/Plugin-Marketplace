@@ -4,7 +4,7 @@
 
 The official registry and delivery project for Nanobug plugins.
 
-Ticket 01 implements reviewed registry publication and native first installation. Ticket 02 adds version history, optional download statistics and explicit safe upgrades; its [verification record](docs/verification/02-versions-updates-2026-10-11.md) tracks actual checks and remaining acceptance. Official plugin migration and unbundled delivery remain in tickets 03–04.
+Tickets 01–04 are implemented and verified: reviewed native installation, version history and safe upgrades, seven independently released official plugins, and unbundled Windows delivery. The [ticket index](docs/tickets/README.md) links the delivery records and actual GitHub states; the [final Windows record](docs/verification/04-unbundled-delivery-2026-10-11.md) states the tested scope and remaining platform limitations.
 
 ## Scope
 

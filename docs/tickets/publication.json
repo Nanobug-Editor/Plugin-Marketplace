@@ -14,8 +14,8 @@
     "number": 1,
     "body_verified": true
   },
-  "ticket_status": "01-02-03-delivered-04-in-progress",
-  "state_readback_at": "2026-10-11T11:23:12Z",
+  "ticket_status": "01-02-03-04-delivered",
+  "state_readback_at": "2026-10-11T16:35:12Z",
   "test_seam_status": "approved",
   "tickets": [
     {
@@ -28,6 +28,8 @@
       "id": 5780918778,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/2",
       "state": "closed",
+      "state_reason": "completed",
+      "closed_at": "2026-10-11T08:11:24Z",
       "labels": [
         "ready-for-agent"
       ],
@@ -45,6 +47,8 @@
       "id": 5780919182,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/3",
       "state": "closed",
+      "state_reason": "completed",
+      "closed_at": "2026-10-11T05:01:48Z",
       "labels": [
         "ready-for-agent"
       ],
@@ -62,6 +66,8 @@
       "id": 5780919898,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4",
       "state": "closed",
+      "state_reason": "completed",
+      "closed_at": "2026-10-11T08:11:27Z",
       "labels": [
         "ready-for-agent"
       ],
@@ -79,23 +85,25 @@
       "number": 5,
       "id": 5780920290,
       "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/5",
-      "state": "open",
+      "state": "closed",
+      "state_reason": "completed",
+      "closed_at": "2026-10-11T16:34:37Z",
       "labels": [
         "ready-for-agent"
       ],
       "body_verified": true,
-      "implementation_state": "candidate",
+      "implementation_state": "complete",
+      "tested_code_commit": "556658e065fa63abcf53404b1205e5e624009086",
       "host_candidate": {
-        "commit": "0b33b7f91971d883b44a35dd5240266bd6a52431",
+        "commit": "576606294cdcf678ade52673c86c1f7a23fc89b1",
         "pull_request": "https://github.com/T-miracle/Nanobug/pull/101",
-        "draft": true
+        "draft": false,
+        "merged": true,
+        "merge_commit": "4d172b97cbbf7aff2bbcd986116321e3566023b9",
+        "merged_at": "2026-10-11T16:25:49Z"
       },
       "verification": "../verification/04-unbundled-delivery-2026-10-11.md",
-      "open_acceptance": [
-        "M22",
-        "M24",
-        "M25"
-      ]
+      "open_acceptance": []
     }
   ],
   "planned_edges": [
