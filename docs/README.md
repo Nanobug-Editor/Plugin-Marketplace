@@ -11,6 +11,8 @@
 | 分诊词汇 | [标签约定](agents/triage-labels.md) |
 | 项目初始化与议题发布证据 | [初始化记录](verification/project-bootstrap-2026-10-09.md) |
 | 工单 01 实现与验收 | [审核收录到原生首次安装](verification/01-reviewed-install-2026-10-10.md) |
+| 工单 02 实现与验收 | [历史版本、统计与升级](verification/02-versions-updates-2026-10-11.md) |
+| 发布数据契约 | [目录、撤回与统计](specs/static-data-contract.md) |
 | 仓库规范 | [AGENTS.md](../AGENTS.md) |
 
 后续验收进入 docs/verification 并从对应工单链接。方案、工单和证据分别维护，不复制 Nanobug 宿主与独立插件的业务文档。文档在 GitHub 可阅读，但不作为独立市场网页发布。

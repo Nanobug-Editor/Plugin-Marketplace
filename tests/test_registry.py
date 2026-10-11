@@ -97,6 +97,25 @@ class RegistryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unsafe ZIP"):
             build_catalog([entry], [], responses.__getitem__)
 
+    def test_reviewed_withdrawal_retains_snapshot_when_asset_is_gone(self):
+        """Withdrawal changes availability, never reviewed bytes or historical notes."""
+        entry, responses, _ = self.fixture()
+        old_catalog = build_catalog([entry], [], responses.__getitem__)
+        changed = copy.deepcopy(entry)
+        changed["versions"][0].update(withdrawn=True, withdrawal_reason="Author withdrew this release")
+        del responses["https://github.com/author/notes/releases/download/v1.0.0/notes.zip"]
+        catalog = build_catalog([changed], [entry], responses.__getitem__, baseline_catalog=old_catalog)
+        release = catalog["plugins"][0]["versions"][0]
+        self.assertTrue(release["withdrawn"])
+        self.assertEqual(release["withdrawal_reason"], "Author withdrew this release")
+        self.assertEqual(release["sha256"], old_catalog["plugins"][0]["versions"][0]["sha256"])
+        changed["versions"][0]["sha256"] = "0" * 64
+        with self.assertRaisesRegex(ValueError, "immutable"):
+            build_catalog([changed], [entry], responses.__getitem__, baseline_catalog=old_catalog)
+        changed["versions"][0]["sha256"] = entry["versions"][0]["sha256"]
+        with self.assertRaisesRegex(ValueError, "withdrawal"):
+            build_catalog([entry], [changed], responses.__getitem__, baseline_catalog=catalog)
+
 
 if __name__ == "__main__":
     unittest.main()

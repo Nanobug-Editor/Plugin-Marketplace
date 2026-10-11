@@ -77,7 +77,7 @@ def inspect_package(payload, digest):
             "platforms": platforms, "readme": readme, "icon": icon}
 
 
-def build_catalog(entries, baseline, fetch, validate=None, transfers=()):
+def build_catalog(entries, baseline, fetch, validate=None, transfers=(), baseline_catalog=None):
     """Validate reviewed registry entries against GitHub and immutable base records.
 
     `fetch` returns JSON for api.github.com and bytes for Release assets. It must
@@ -85,6 +85,7 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=()):
     Ownership changes use a separate, manually reviewed transfer before versions.
     """
     previous = {e["id"]: e for e in baseline}
+    previous_snapshots = {e["id"]: e for e in (baseline_catalog or {}).get("plugins", [])}
     seen = set()
     plugins = []
     for entry in entries:
@@ -104,7 +105,17 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=()):
                         "ownership changes require separate transfer review without version changes")
             old_versions = {v["version"]: v for v in old["versions"]}
             new_versions = {v["version"]: v for v in entry["versions"]}
-            require(all(new_versions.get(v) == record for v, record in old_versions.items()), "published version is immutable")
+            for version, record in old_versions.items():
+                candidate = new_versions.get(version)
+                require(candidate is not None and
+                        {k: v for k, v in candidate.items() if k not in ("withdrawn", "withdrawal_reason")}
+                        == {k: v for k, v in record.items() if k not in ("withdrawn", "withdrawal_reason")},
+                        "published version is immutable")
+                # Withdrawal is a one-way reviewed status change, never a ZIP revision.
+                if record.get("withdrawn"):
+                    require(candidate.get("withdrawn") and
+                            candidate.get("withdrawal_reason") == record.get("withdrawal_reason"),
+                            "withdrawal cannot be undone or edited")
         api = "https://api.github.com/repos/" + repo
         repository = fetch(api)
         require(not repository["private"], "repository must be public")
@@ -116,6 +127,23 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=()):
             require(version not in version_ids, "duplicate version")
             version_ids.add(version)
             require(re.fullmatch(r"[0-9a-f]{40}", commit), "full source commit required")
+            withdrawn = release.get("withdrawn", False)
+            reason = release.get("withdrawal_reason")
+            require(isinstance(withdrawn, bool), "withdrawn must be boolean")
+            require((withdrawn and isinstance(reason, str) and 0 < len(reason.encode()) <= 1024)
+                    or (not withdrawn and reason is None), "withdrawal requires a reason")
+            if withdrawn:
+                # A prior published snapshot is the only source for a now-deleted ZIP.
+                prior = previous_snapshots.get(identity, {})
+                prior_versions = {v["version"]: v for v in prior.get("versions", [])}
+                snapshot = prior_versions.get(version)
+                require(old and version in old_versions and prior.get("repository") == repo
+                        and snapshot and snapshot["sha256"] == release["sha256"]
+                        and snapshot["commit"] == commit
+                        and snapshot["manifest"]["id"] == identity,
+                        "withdrawal requires the reviewed published snapshot")
+                versions.append(dict(snapshot, withdrawn=True, withdrawal_reason=reason))
+                continue
             license_info = fetch(api + "/license?ref=" + commit)
             license_id = license_info["license"]["spdx_id"]
             require(license_id in OPEN_LICENSES, "recognized open-source license required")
@@ -139,7 +167,7 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=()):
             versions.append(dict(snapshot, version=version, commit=commit, license=license_id,
                                  url=download, asset_id=candidates[0]["id"], sha256=release["sha256"],
                                  published_at=release["published_at"], changelog=release["changelog"],
-                                 withdrawn=False))
+                                 withdrawn=False, withdrawal_reason=None))
         require(versions, "at least one reviewed version required")
         plugins.append({k: entry[k] for k in ("id", "repository", "maintainers", "summary", "category", "tags")} |
                        {"versions": versions, "downloads": None})
@@ -164,6 +192,7 @@ def main():
     parser.add_argument("--registry", type=Path, default=Path("registry"))
     parser.add_argument("--baseline", type=Path)
     parser.add_argument("--baseline-dir", type=Path)
+    parser.add_argument("--baseline-catalog", type=Path)
     parser.add_argument("--transfers", type=Path, default=Path("transfers"))
     parser.add_argument("--validator", type=Path, help="Built Nanobug inspect_package executable")
     parser.add_argument("--output", type=Path, default=Path("dist"))
@@ -174,6 +203,7 @@ def main():
     if args.baseline_dir:
         baseline = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(args.baseline_dir.glob("*.json"))]
     transfers = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(args.transfers.glob("*.json"))]
+    baseline_catalog = json.loads(args.baseline_catalog.read_text(encoding="utf-8")) if args.baseline_catalog else None
     require(not entries or args.validator and args.validator.is_file(), "Nonempty publication requires Nanobug Package validator")
     def validate(payload):
         """Only the pinned host validator executes, never code or commands from an incoming package."""
@@ -182,7 +212,7 @@ def main():
             package.write_bytes(payload)
             subprocess.run([str(args.validator.resolve()), str(package)], check=True, timeout=60,
                            stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL)
-    catalog = build_catalog(entries, baseline, fetch_github, validate, transfers)
+    catalog = build_catalog(entries, baseline, fetch_github, validate, transfers, baseline_catalog)
     args.output.mkdir(parents=True, exist_ok=True)
     (args.output / "catalog.json").write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (args.output / ".nojekyll").touch()

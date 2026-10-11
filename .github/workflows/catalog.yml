@@ -5,6 +5,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    # GitHub schedules are best-effort; clients always show the last measurement time.
+    - cron: '17 */6 * * *'
 permissions:
   contents: read
   deployments: read
@@ -63,6 +66,16 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: '3.13'
+      - name: Read last published catalog snapshot
+        shell: pwsh
+        run: |
+          # A reviewed withdrawal may outlive its Release ZIP; keep its immutable detail snapshot.
+          try {
+            Invoke-WebRequest -Uri 'https://t-miracle.github.io/Nanobug-Plugin-Marketplace/catalog.json' -OutFile previous-catalog.json
+          } catch {
+            if (Test-Path previous-catalog.json) { Remove-Item -LiteralPath previous-catalog.json }
+            Write-Output 'No published catalog snapshot is available yet.'
+          }
       - name: Test trusted catalog builder
         working-directory: trusted
         run: python -m unittest discover -s tests -v
@@ -103,7 +116,19 @@ jobs:
           if ('${{ steps.candidates.outputs.present }}' -eq 'true') {
             $arguments += @('--validator', 'validator/target/debug/examples/inspect_package.exe')
           }
+          if (Test-Path previous-catalog.json) {
+            $arguments += @('--baseline-catalog', 'previous-catalog.json')
+          }
           python @arguments
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Measure reviewed Release ZIP downloads
+        if: github.event_name != 'pull_request'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Statistics fail soft and retain the previously published timestamp and counts.
+          python trusted/market_statistics.py --catalog dist/catalog.json --previous-url https://t-miracle.github.io/Nanobug-Plugin-Marketplace/stats.json --output dist/stats.json
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'

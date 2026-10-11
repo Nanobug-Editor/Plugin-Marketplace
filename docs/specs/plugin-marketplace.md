@@ -1,7 +1,7 @@
 # Nanobug 初版插件市场执行规格
 
 日期：2026-10-09。稳定标识：`plugin-marketplace-v1`。
-状态：产品范围、主要测试接缝、四张粗粒度工单和四条直接阻塞边已于 2026-10-09 获用户确认；执行规格已发布为 [#1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1)，四张工单已发布并核对阻塞关系，尚未开始实现。
+状态：范围、接缝、四张工单和依赖已于 2026-10-09 获确认并发布。2026-10-11 正依用户要求顺序实施全部剩余工单；实际进度和验收以[工单目录](../tickets/README.md)及各单验证记录为准。
 目标跟踪器：T-miracle/Nanobug-Plugin-Marketplace GitHub Issues；发布标签：`ready-for-agent`。发布前检索稳定标识，避免重复创建。
 
 ## Problem Statement
