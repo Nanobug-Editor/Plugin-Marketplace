@@ -1,20 +1,20 @@
 # 工单 03：独立 Release 与市场收录候选
 
-2026-10-11；对应 [#4](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4)。七个独立仓库、稳定 Release、固定 ZIP、原生首次安装与各自代表行为已验证；候选尚待 PR 人工审核和正式非空 Pages 验收，议题仍 open。
+2026-10-11；对应 [#4](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4)。七个新命名仓库、稳定 Release、固定 ZIP、原生首次安装与各自代表行为已验证；维护者已授权本批通过收录，待更新后的可信 PR 校验及正式非空 Pages 验收，议题仍 open。
 
 ## 固定来源
 
-公开宿主 / SDK 为 [`b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`](https://github.com/T-miracle/Nanobug/commit/b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5)，市场可信校验器基线为 `4d7ee9a96bc86ccc1a62ac51f8d8944ef1b0acac`。七仓 owner/maintainer 均为 T-miracle；实际读回每个源码 commit 的 MIT 许可证、固定 tag、非 draft/非 prerelease 状态、附件大小和 GitHub SHA-256。CI head SHA 与源码提交相同，全部 success。
+公开宿主 / SDK 为 [`b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`](https://github.com/T-miracle/Nanobug/commit/b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5)，市场可信校验器基线为 `4d7ee9a96bc86ccc1a62ac51f8d8944ef1b0acac`。七仓 owner/maintainer 均为 T-miracle；生产构建器通过真实新地址读回每个源码 commit 的 MIT 许可证、固定 tag、非 draft/非 prerelease 状态与完整 ZIP SHA-256。下表源码 CI 是原仓同一提交的已通过证据，新仓构建结果另行记录，不将进行中任务记为通过。
 
 | 仓库 | 安装 ID / Release | 源码 commit | 完整 ZIP SHA-256 | 源码 CI |
 | --- | --- | --- | --- | --- |
-| [HTML](https://github.com/T-miracle/Nanobug-Plugin-HTML) | `html` / [0.3.1](https://github.com/T-miracle/Nanobug-Plugin-HTML/releases/tag/v0.3.1) | `68b8c7baabd0790cba884aa19e4f2523b2b2e7ce` | `6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e` | [通过](https://github.com/T-miracle/Nanobug-Plugin-HTML/actions/runs/38118544496) |
-| [JavaScript](https://github.com/T-miracle/Nanobug-Plugin-JavaScript) | `javascript` / [0.3.1](https://github.com/T-miracle/Nanobug-Plugin-JavaScript/releases/tag/v0.3.1) | `18dc8818787857b75cb1ae1b4ffd88edfa35a631` | `a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144` | [通过](https://github.com/T-miracle/Nanobug-Plugin-JavaScript/actions/runs/38118553877) |
-| [Markdown](https://github.com/T-miracle/Nanobug-Plugin-Markdown) | `markdown` / [0.17.1](https://github.com/T-miracle/Nanobug-Plugin-Markdown/releases/tag/v0.17.1) | `31516790679c2ab591105d11e6fd15e974b72505` | `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Markdown/actions/runs/38118561389) |
-| [Rust](https://github.com/T-miracle/Nanobug-Plugin-Rust) | `rust` / [0.6.1](https://github.com/T-miracle/Nanobug-Plugin-Rust/releases/tag/v0.6.1) | `942a905e4d4dfe02a9b9b162c35e3c2788691d5f` | `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Rust/actions/runs/38118570843) |
-| [Image](https://github.com/T-miracle/Nanobug-Plugin-Image) | `svg` / [0.6.1](https://github.com/T-miracle/Nanobug-Plugin-Image/releases/tag/v0.6.1) | `cac09895b6bc9cd227a6e318edb8c868da41084e` | `911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Image/actions/runs/38118577996) |
-| [TOML](https://github.com/T-miracle/Nanobug-Plugin-TOML) | `toml` / [0.2.3](https://github.com/T-miracle/Nanobug-Plugin-TOML/releases/tag/v0.2.3) | `a1a4677118403ac01e6a0fd2f667cfa788aa9bd2` | `2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed` | [通过](https://github.com/T-miracle/Nanobug-Plugin-TOML/actions/runs/38118585073) |
-| [XML](https://github.com/T-miracle/Nanobug-Plugin-XML) | `xml` / [0.2.2](https://github.com/T-miracle/Nanobug-Plugin-XML/releases/tag/v0.2.2) | `69749e0d37ca28571e39101678f77a051a939ca8` | `c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a` | [通过](https://github.com/T-miracle/Nanobug-Plugin-XML/actions/runs/38118592031) |
+| [HTML](https://github.com/T-miracle/HTML-for-Nanobug) | `html` / [0.3.1](https://github.com/T-miracle/HTML-for-Nanobug/releases/tag/v0.3.1) | `68b8c7baabd0790cba884aa19e4f2523b2b2e7ce` | `6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e` | [通过](https://github.com/T-miracle/Nanobug-Plugin-HTML/actions/runs/38118544496) |
+| [JavaScript](https://github.com/T-miracle/JavaScript-for-Nanobug) | `javascript` / [0.3.1](https://github.com/T-miracle/JavaScript-for-Nanobug/releases/tag/v0.3.1) | `18dc8818787857b75cb1ae1b4ffd88edfa35a631` | `a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144` | [通过](https://github.com/T-miracle/Nanobug-Plugin-JavaScript/actions/runs/38118553877) |
+| [Markdown](https://github.com/T-miracle/Markdown-for-Nanobug) | `markdown` / [0.17.1](https://github.com/T-miracle/Markdown-for-Nanobug/releases/tag/v0.17.1) | `31516790679c2ab591105d11e6fd15e974b72505` | `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Markdown/actions/runs/38118561389) |
+| [Rust](https://github.com/T-miracle/Rust-for-Nanobug) | `rust` / [0.6.1](https://github.com/T-miracle/Rust-for-Nanobug/releases/tag/v0.6.1) | `942a905e4d4dfe02a9b9b162c35e3c2788691d5f` | `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Rust/actions/runs/38118570843) |
+| [Image](https://github.com/T-miracle/Image-for-Nanobug) | `svg` / [0.6.1](https://github.com/T-miracle/Image-for-Nanobug/releases/tag/v0.6.1) | `cac09895b6bc9cd227a6e318edb8c868da41084e` | `911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654` | [通过](https://github.com/T-miracle/Nanobug-Plugin-Image/actions/runs/38118577996) |
+| [TOML](https://github.com/T-miracle/TOML-for-Nanobug) | `toml` / [0.2.3](https://github.com/T-miracle/TOML-for-Nanobug/releases/tag/v0.2.3) | `a1a4677118403ac01e6a0fd2f667cfa788aa9bd2` | `2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed` | [通过](https://github.com/T-miracle/Nanobug-Plugin-TOML/actions/runs/38118585073) |
+| [XML](https://github.com/T-miracle/XML-for-Nanobug) | `xml` / [0.2.2](https://github.com/T-miracle/XML-for-Nanobug/releases/tag/v0.2.2) | `69749e0d37ca28571e39101678f77a051a939ca8` | `c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a` | [通过](https://github.com/T-miracle/Nanobug-Plugin-XML/actions/runs/38118592031) |
 
 独立仓库使用公开 SDK 缓存，不引用主项目 crates 路径、不附带 SDK 源码副本。Image 保留 `svg` 身份，Rust 只发布已合并包，不发布独立 Rust Debugger 或示例。原宿主源码暂作冻结输入，业务维护以独立仓库为准，04 验证替代输入后再删除。
 
@@ -46,8 +46,12 @@
 
 七包首次验收的第一次执行在 XML 安装记录提交后超过共享 60 秒而失败。实际 XML 对照用例持续推进；新增七包场景单独使用 180 秒预算，XML 最后 69.21 秒完成，普通回归仍为 60 秒。生产代码未因此修改，没有删除断言或扩大 ignore。
 
-## 未完成边界
+## 本批收录授权与发布状态
 
-[执行规格](../specs/plugin-marketplace.md)要求：“首次收录和每个版本都经过自动校验及人工审核。” 此批同一 PR 共用可信校验器构建，七个版本仍逐一人工审阅；自动源码双轴审查均无新阻断，不计作人工收录审核。
+2026-10-11，维护者在当前 Codex 会话明确要求“这几个本地插件帮我自动通过审核”。该指令授权本次七个既有本地官方插件的固定版本通过收录并合并 [PR #6](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/pull/6)。审核继续校验来源、权限、原生依赖、稳定 tag、完整 ZIP 哈希和可信 PR CI；不将这次授权扩展为第三方或以后版本的自动准入。
 
-尚需 PR 人工批准、正式非空 Pages/统计及客户端消费验收，01/03 不提前关闭。04 仅做删除前盘点，尚未删除源码/示例或改变发行。完整 ZIP 哈希锁定审核字节，不能单凭它证明所列源码的可复现构建。GPUI 验收使用原生事件与布局自动测试；人工操作系统 IME 和非 Windows 执行未验证。
+此前维护者要求重新创建项目并命名为 `X for Nanobug`。已创建上表七个 `X-for-Nanobug` 新仓库，保留原源码 commit、tag、ID、版本、ZIP 文件名和字节。Release 正文与发布日期按新仓库读回，候选记录尚未正式发布，来源更新不覆盖已发布市场记录。包内历史说明保持其冻结版本。
+
+原仓源码 CI 的通过证据可复用：输入源码、SDK、工具链和包资源未变。新仓库独立构建已启动，最终结果另行读回记录；源码 CI 只证明可独立构建，不宣称不同机器重建 ZIP 必然相同。新地址必须重新经过真实 HTTPS 下载、完整摘要及惰性 Package 校验。
+
+尚需更新后的可信 PR CI、正式非空 Pages/统计及客户端消费验收；01/03 不提前关闭。04 仅做删除前盘点，尚未删除源码/示例或改变发行。完整 ZIP 哈希锁定审核字节，不能单凭它证明所列源码的可复现构建。GPUI 验收使用原生事件与布局自动测试；人工操作系统 IME 和非 Windows 执行未验证。

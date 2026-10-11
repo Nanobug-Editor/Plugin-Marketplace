@@ -1,6 +1,6 @@
 {
   "id": "markdown",
-  "repository": "T-miracle/Nanobug-Plugin-Markdown",
+  "repository": "T-miracle/Markdown-for-Nanobug",
   "maintainers": [
     "T-miracle"
   ],
@@ -16,8 +16,8 @@
       "commit": "31516790679c2ab591105d11e6fd15e974b72505",
       "tag": "v0.17.1",
       "asset": "markdown-0.17.1.zip",
-      "published_at": "2026-10-11T06:38:32Z",
-      "changelog": "# Markdown 0.17.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `markdown`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `31516790679c2ab591105d11e6fd15e974b72505`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "published_at": "2026-10-11T07:38:38Z",
+      "changelog": "# Markdown for Nanobug 0.17.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `markdown`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `31516790679c2ab591105d11e6fd15e974b72505`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
       "sha256": "2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3"
     }
   ]

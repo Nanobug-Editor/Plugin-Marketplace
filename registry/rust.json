@@ -1,6 +1,6 @@
 {
   "id": "rust",
-  "repository": "T-miracle/Nanobug-Plugin-Rust",
+  "repository": "T-miracle/Rust-for-Nanobug",
   "maintainers": [
     "T-miracle"
   ],
@@ -17,8 +17,8 @@
       "commit": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f",
       "tag": "v0.6.1",
       "asset": "rust-0.6.1.zip",
-      "published_at": "2026-10-11T06:38:45Z",
-      "changelog": "# Rust 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `rust`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `942a905e4d4dfe02a9b9b162c35e3c2788691d5f`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+      "published_at": "2026-10-11T07:38:42Z",
+      "changelog": "# Rust for Nanobug 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `rust`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `942a905e4d4dfe02a9b9b162c35e3c2788691d5f`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
       "sha256": "9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867"
     }
   ]

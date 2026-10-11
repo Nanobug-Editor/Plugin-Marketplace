@@ -1,6 +1,6 @@
 # 03：七个官方插件独立构建、发布与市场安装
 
-状态：实施中，已发布为 [#4](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4)；七仓 Release、七包原生首次安装及代表行为已验证，待注册表人工审核与正式 Pages 验收。[当前证据](../verification/03-official-distribution-2026-10-11.md)。稳定标识：`plugin-marketplace-v1-03`。
+状态：实施中，已发布为 [#4](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/4)；七包原生首次安装及代表行为已验证，七个新命名仓库已发布相同 ZIP，已获本批收录授权，待可信 PR 校验、合并与正式 Pages 验收。[当前证据](../verification/03-official-distribution-2026-10-11.md)。稳定标识：`plugin-marketplace-v1-03`。
 
 ## Parent
 
