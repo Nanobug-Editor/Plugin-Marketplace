@@ -13,6 +13,7 @@
 | 工单 01 实现与验收 | [审核收录到原生首次安装](verification/01-reviewed-install-2026-10-10.md) |
 | 工单 02 实现与验收 | [历史版本、统计与升级](verification/02-versions-updates-2026-10-11.md) |
 | 工单 03 当前证据 | [七仓稳定 Release 与收录候选](verification/03-official-distribution-2026-10-11.md) |
+| 工单 04 当前证据 | [无随附实施候选与开放验收](verification/04-unbundled-delivery-2026-10-11.md) |
 | 发布数据契约 | [目录、撤回与统计](specs/static-data-contract.md) |
 | 仓库规范 | [AGENTS.md](../AGENTS.md) |
 

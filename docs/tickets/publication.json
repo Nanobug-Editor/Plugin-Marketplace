@@ -15,7 +15,7 @@
     "body_verified": true
   },
   "ticket_status": "01-02-03-delivered-04-in-progress",
-  "state_readback_at": "2026-10-11T08:11:27Z",
+  "state_readback_at": "2026-10-11T11:23:12Z",
   "test_seam_status": "approved",
   "tickets": [
     {
@@ -83,7 +83,19 @@
       "labels": [
         "ready-for-agent"
       ],
-      "body_verified": true
+      "body_verified": true,
+      "implementation_state": "candidate",
+      "host_candidate": {
+        "commit": "0b33b7f91971d883b44a35dd5240266bd6a52431",
+        "pull_request": "https://github.com/T-miracle/Nanobug/pull/101",
+        "draft": true
+      },
+      "verification": "../verification/04-unbundled-delivery-2026-10-11.md",
+      "open_acceptance": [
+        "M22",
+        "M24",
+        "M25"
+      ]
     }
   ],
   "planned_edges": [
