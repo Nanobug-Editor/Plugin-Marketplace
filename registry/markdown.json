@@ -12,6 +12,15 @@
   ],
   "versions": [
     {
+      "version": "0.17.2",
+      "commit": "8480eb38e059d575cb5dafd740ed14f035d20936",
+      "tag": "v0.17.2",
+      "asset": "markdown-0.17.2.zip",
+      "published_at": "2026-10-11T15:28:05Z",
+      "changelog": "# Markdown for Nanobug 0.17.2\n\n- Preserve task checkbox identities, keyboard focus and checked state across local reparsing.\n- Check the 256 KiB derived preview boundary before parsing, retaining editable source and current document revisions without raising host or WASM quotas.\n- Recover normal empty and small previews after retiring an oversized cache, including an empty SDK locale.\n\nValidation: 76 plugin unit tests and all 88 actual WASM/native Markdown acceptance scenarios passed on Windows x86_64. Installation ID and permissions remain unchanged.\n\nSource commit: `8480eb38e059d575cb5dafd740ed14f035d20936`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `cac840637b5348c553da810e0d101f318088714caec18e30710bbc97c8327e13`\n\nThe checksum covers the complete attachment. Preserve v0.17.1 and its published bytes; later rebuilds must not replace this reviewed same-version ZIP. Marketplace admission uses a separate registry PR. Physical OS IME candidate windows and macOS/Linux were not manually verified.",
+      "sha256": "cac840637b5348c553da810e0d101f318088714caec18e30710bbc97c8327e13"
+    },
+    {
       "version": "0.17.1",
       "commit": "31516790679c2ab591105d11e6fd15e974b72505",
       "tag": "v0.17.1",
