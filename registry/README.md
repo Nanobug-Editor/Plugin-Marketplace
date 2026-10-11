@@ -2,7 +2,7 @@
 
 Only approved `<plugin-id>.json` records belong here. No test plugin is listed in production.
 
-Submit one stable version per PR, starting from this shape:
+Submit one stable version per plugin in a PR, starting from this shape. A related batch may include several plugins, but each version needs its own source, package and permission review:
 
 ```json
 {
@@ -26,7 +26,7 @@ Submit one stable version per PR, starting from this shape:
 
 Use an SPDX-recognized open-source license at the pinned source commit. The repository owner must be among the maintainers. The reviewer must verify that the PR submitter controls that account/repository; listing a name does not prove ownership. For organizations, obtain an acknowledged organization maintainer review.
 
-Every version needs a fresh registry PR and human review. Do not alter or remove existing version records. The validator resolves the tag to the pinned commit, checks the exact ZIP asset, verifies its digest and inspects it using Nanobug's public Package validator. It never runs plugin code. Source/build provenance and requested permission necessity still require review.
+Every new version must be included in a fresh registry PR and receive individual human review. Do not alter or remove existing version records. The validator resolves the tag to the pinned commit, checks the exact ZIP asset, verifies its digest and inspects it using Nanobug's public Package validator. It never runs plugin code. Source/build provenance and requested permission necessity still require review.
 PR checks compare the candidate against the trusted base branch. Push and manual publication compare against the registry at the last successful Pages deployment. Rejected pushes cannot advance that baseline, so a later no-op push or manual run cannot silently change a published version.
 
 Ownership transfers require a **separate PR with no version changes**, acknowledgments from the previous and new owners, and a JSON receipt in `transfers/` containing `id`, `from_repository`, `from_maintainers`, `to_repository`, `to_maintainers`. New versions follow only after the transfer merges. Never reuse an identity for unrelated code.
