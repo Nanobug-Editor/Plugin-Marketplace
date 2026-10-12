@@ -2,7 +2,7 @@
 
 日期：2026-10-09；执行状态更新于北京时间 2026-10-12。用户已要求按顺序执行全部剩余工单。01 的审核收录与首次安装、02 的历史版本/统计/安全升级、03 的七个独立插件仓库/Release/正式市场、04 的源码迁出与无随附 Windows 交付均已完成。原 37 项失败及图像组稳定性已解决；[宿主 PR #101](https://github.com/T-miracle/Nanobug/pull/101)已合并，四张实施工单均已关闭。实际检查、历史证据和验证边界见各单 verification。
 
-父规格：[GitHub #1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1) / [本地执行规格](../specs/plugin-marketplace.md)。原 [Nanobug #100](https://github.com/T-miracle/Nanobug/issues/100) 仅供追溯，不修改或关闭；新仓库父规格亦不因拆单而关闭。
+父规格：[GitHub #1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1) / [本地执行规格](../specs/plugin-marketplace.md)。2026-10-12 核对 M01–M26 已交付、四张子工单均已完成后，经用户明确授权关闭 #1，读回为 closed/completed。原 [Nanobug #100](https://github.com/T-miracle/Nanobug/issues/100) 仅供追溯，保持原状；父规格的本次关闭依据是完整验收及明确授权。
 
 `2026-10-11T16:35:12Z` 已读回 #2、#3、#4、#5 均为 closed/completed，父规格 #1 与历史 Nanobug #100 保持 open。[发布记录](publication.json)保留实际 ID、依赖与关闭时间。首批七个本地插件的收录 PR #6 和 Markdown 0.17.2 的 PR #7 已审核合并，正式 Pages 发布成功；历史包 ID、版本、ZIP 名称与摘要不改写。该审核仅覆盖这些固定版本，独立第三方作者没有参与本次首批验收。
 
@@ -100,4 +100,4 @@ M13 对首次安装的断言由 01 建立；02 扩展升级场景，不复制来
 
 [发布记录](publication.json)保存现行仓库、历史来源及方案/工单的真实标识。用户已批准按 01、02、03、04 发布，应用 `ready-for-agent`，将四条直接边写成 GitHub 原生 issue dependencies 并读回核对；仅 API 确实不可用时回退正文并记录限制。
 
-全部子议题已核对完整正文、父规格链接、ready-for-agent 标签和真实原生阻塞关系；不指派执行人、不启动实现、不改写或关闭父规格。实施证据按插件文档约定进入 verification 分类，完成后更新实际状态。
+初次发布时，全部子议题已核对完整正文、父规格链接、ready-for-agent 标签和真实原生阻塞关系；当时不指派执行人、不启动实现、不改写或关闭父规格。后续实施已完成，2026-10-12 按用户明确授权关闭父规格；实施与关闭证据见 verification 及发布记录。

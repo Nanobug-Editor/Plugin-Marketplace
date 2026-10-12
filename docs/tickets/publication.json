@@ -7,15 +7,19 @@
     "labels": [
       "ready-for-agent"
     ],
-    "state": "open",
+    "state": "closed",
+    "state_reason": "completed",
+    "closed_at": "2026-10-12T00:53:25Z",
+    "closure_authorized_on": "2026-10-12",
     "url": "https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1",
     "id": 5780918352,
     "title": "[Spec] 初版插件市场与官方插件独立分发",
     "number": 1,
-    "body_verified": true
+    "body_verified": true,
+    "verification": "../verification/04-unbundled-delivery-2026-10-11.md"
   },
   "ticket_status": "01-02-03-04-delivered",
-  "state_readback_at": "2026-10-11T16:35:12Z",
+  "state_readback_at": "2026-10-12T00:54:59Z",
   "test_seam_status": "approved",
   "tickets": [
     {

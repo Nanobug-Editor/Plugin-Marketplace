@@ -46,3 +46,9 @@ workspace 中 188 项 ignored 不计通过，其实际执行由独立列出的 r
 M22 的覆盖迁移、M23 的无随附发行和旧数据保留、M25 的交付门禁均已满足。M24 使用原生 GPUI 自动化，覆盖中英文、深浅主题、键盘/焦点、中文输入与 composition、滚动、14/18/24 字号和实际布局；未实测物理 OS IME 候选窗口，不宣称其他 run-config 规格的专项人工验收完成。
 
 macOS/Linux、签名及公证未验证；没有发布新的宿主版本标签。非阻断建议是后续合并几个 Markdown 测试中重复的 LocateViewport 辅助逻辑。父市场规格 #1 和历史 Nanobug #100 不随实施工单关闭。
+
+## 父规格关闭补记
+
+2026-10-12 用户明确要求核对并关闭父规格。M01–M26 已有本记录及 01–03 的完整交付依据，四张子工单均为 closed/completed，宿主 PR #101 已合并，[最终正式 CI 和 Pages 部署](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/actions/runs/38156356523)成功，因此[父规格 #1](https://github.com/T-miracle/Nanobug-Plugin-Marketplace/issues/1)可关闭。
+
+实际关闭时间为 `2026-10-12T00:53:25Z`（北京时间 2026-10-12 08:53:25），已读回 closed/completed，并核对关闭正文。本次复用已完成的行为证据，仅更新状态与文档，不重复运行 Rust 或原生套件。上述未验证边界继续保留，历史 Nanobug #100 保持原状。
