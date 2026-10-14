@@ -1,0 +1,12 @@
+{
+  "id": "html",
+  "from_repository": "T-miracle/HTML-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/HTML",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

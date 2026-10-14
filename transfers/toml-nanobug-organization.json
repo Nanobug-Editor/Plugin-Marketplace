@@ -1,0 +1,12 @@
+{
+  "id": "toml",
+  "from_repository": "T-miracle/TOML-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/TOML",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

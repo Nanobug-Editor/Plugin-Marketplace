@@ -1,0 +1,12 @@
+{
+  "id": "xml",
+  "from_repository": "T-miracle/XML-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/XML",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

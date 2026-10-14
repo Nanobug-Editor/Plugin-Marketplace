@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-14T15:22:03Z",
+  "verification_date_asia_shanghai": "2026-10-14",
+  "verification_time_note": "Read-only remote checks were performed earlier in this agent session on the verification date; exact request timestamps were not separately recorded. recorded_at_utc is evidence serialization time.",
+  "scope": "Seven legacy T-miracle/Nanobug-Plugin-* repositories compared against their then-current T-miracle/*-for-Nanobug repositories. Current repositories may subsequently be transferred; source names below identify the audit observations.",
+  "methods": [
+    "GET /repos/{owner}/{repo}/branches?per_page=100",
+    "GET /repos/{owner}/{repo}/git/matching-refs/tags/",
+    "GET /repos/{current}/compare/{legacy_main_sha}...main",
+    "GET /repos/{owner}/{repo}/releases?per_page=100",
+    "GET /repos/{owner}/{repo}/issues?state=all&per_page=100 (includes issues and pull requests)",
+    "GET /repos/{legacy}"
+  ],
+  "repositories": [
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-HTML",
+      "legacy_repository_id": "1414014499",
+      "current_repository_at_verification": "T-miracle/HTML-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.3.1",
+          "sha": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "ea9815aa6f4b7fdf317ed797bac9bf7c28638d0e"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.3.1",
+          "sha": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/HTML-for-Nanobug/compare/68b8c7baabd0790cba884aa19e4f2523b2b2e7ce...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce",
+        "merge_base_sha": "68b8c7baabd0790cba884aa19e4f2523b2b2e7ce"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409476466,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-HTML/releases/tag/v0.3.1",
+          "tag_name": "v0.3.1",
+          "name": "HTML 0.3.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:33:55Z",
+          "published_at": "2026-10-11T06:38:16Z",
+          "body": "# HTML 0.3.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `html`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `68b8c7baabd0790cba884aa19e4f2523b2b2e7ce`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630006433,
+              "name": "html-0.3.1.zip",
+              "size": 217113,
+              "digest": "sha256:6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:38:17Z",
+              "updated_at": "2026-10-11T06:38:17Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-HTML/releases/download/v0.3.1/html-0.3.1.zip"
+            },
+            {
+              "id": 630006500,
+              "name": "html-0.3.1.zip.sha256",
+              "size": 81,
+              "digest": "sha256:05ae49018681f00a59b3f53fd1fd45da0dde0f9e713166d4cb943c7c4ca70253",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:38:19Z",
+              "updated_at": "2026-10-11T06:38:19Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-HTML/releases/download/v0.3.1/html-0.3.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409507531,
+          "url": "https://github.com/T-miracle/HTML-for-Nanobug/releases/tag/v0.3.1",
+          "tag_name": "v0.3.1",
+          "name": "HTML for Nanobug 0.3.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:33:55Z",
+          "published_at": "2026-10-11T07:38:03Z",
+          "body": "# HTML for Nanobug 0.3.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `html`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `68b8c7baabd0790cba884aa19e4f2523b2b2e7ce`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630115511,
+              "name": "html-0.3.1.zip",
+              "size": 217113,
+              "digest": "sha256:6f1ad3e33ade378f9fdbdedef5d1d8e6f91b4059f620f7a490f0dd97af4a4f5e",
+              "download_count": 20,
+              "created_at": "2026-10-11T07:38:07Z",
+              "updated_at": "2026-10-11T07:38:08Z",
+              "browser_download_url": "https://github.com/T-miracle/HTML-for-Nanobug/releases/download/v0.3.1/html-0.3.1.zip"
+            },
+            {
+              "id": 630115550,
+              "name": "html-0.3.1.zip.sha256",
+              "size": 81,
+              "digest": "sha256:05ae49018681f00a59b3f53fd1fd45da0dde0f9e713166d4cb943c7c4ca70253",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:09Z",
+              "updated_at": "2026-10-11T07:38:09Z",
+              "browser_download_url": "https://github.com/T-miracle/HTML-for-Nanobug/releases/download/v0.3.1/html-0.3.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-JavaScript",
+      "legacy_repository_id": "1414014624",
+      "current_repository_at_verification": "T-miracle/JavaScript-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "18dc8818787857b75cb1ae1b4ffd88edfa35a631"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.3.1",
+          "sha": "18dc8818787857b75cb1ae1b4ffd88edfa35a631",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "7e4b3b45d15389f26ae8fa969525db8cad637d11"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.3.1",
+          "sha": "18dc8818787857b75cb1ae1b4ffd88edfa35a631",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/JavaScript-for-Nanobug/compare/18dc8818787857b75cb1ae1b4ffd88edfa35a631...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "18dc8818787857b75cb1ae1b4ffd88edfa35a631",
+        "merge_base_sha": "18dc8818787857b75cb1ae1b4ffd88edfa35a631"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409476535,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-JavaScript/releases/tag/v0.3.1",
+          "tag_name": "v0.3.1",
+          "name": "JavaScript 0.3.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:09Z",
+          "published_at": "2026-10-11T06:38:23Z",
+          "body": "# JavaScript 0.3.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `javascript`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `18dc8818787857b75cb1ae1b4ffd88edfa35a631`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630006665,
+              "name": "javascript-0.3.1.zip",
+              "size": 1748556,
+              "digest": "sha256:a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:38:25Z",
+              "updated_at": "2026-10-11T06:38:25Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-JavaScript/releases/download/v0.3.1/javascript-0.3.1.zip"
+            },
+            {
+              "id": 630006702,
+              "name": "javascript-0.3.1.zip.sha256",
+              "size": 87,
+              "digest": "sha256:49d1bb6845da635500ad4dd88f6747af02c9c3c05294096f690cd7d53b13593d",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:38:27Z",
+              "updated_at": "2026-10-11T06:38:27Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-JavaScript/releases/download/v0.3.1/javascript-0.3.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409507811,
+          "url": "https://github.com/T-miracle/JavaScript-for-Nanobug/releases/tag/v0.3.1",
+          "tag_name": "v0.3.1",
+          "name": "JavaScript for Nanobug 0.3.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:09Z",
+          "published_at": "2026-10-11T07:38:32Z",
+          "body": "# JavaScript for Nanobug 0.3.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `javascript`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `18dc8818787857b75cb1ae1b4ffd88edfa35a631`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630116325,
+              "name": "javascript-0.3.1.zip",
+              "size": 1748556,
+              "digest": "sha256:a09afb41de50211e5e0a866d2698dde2a6d524b54dc74149eda573f42eabe144",
+              "download_count": 20,
+              "created_at": "2026-10-11T07:38:34Z",
+              "updated_at": "2026-10-11T07:38:35Z",
+              "browser_download_url": "https://github.com/T-miracle/JavaScript-for-Nanobug/releases/download/v0.3.1/javascript-0.3.1.zip"
+            },
+            {
+              "id": 630116422,
+              "name": "javascript-0.3.1.zip.sha256",
+              "size": 87,
+              "digest": "sha256:49d1bb6845da635500ad4dd88f6747af02c9c3c05294096f690cd7d53b13593d",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:36Z",
+              "updated_at": "2026-10-11T07:38:36Z",
+              "browser_download_url": "https://github.com/T-miracle/JavaScript-for-Nanobug/releases/download/v0.3.1/javascript-0.3.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-Markdown",
+      "legacy_repository_id": "1414014757",
+      "current_repository_at_verification": "T-miracle/Markdown-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "31516790679c2ab591105d11e6fd15e974b72505"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.17.1",
+          "sha": "31516790679c2ab591105d11e6fd15e974b72505",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/codex/marketplace-regressions",
+          "sha": "985ea81ed762ea7a62f371ec4dfdf273cc9f0fe4"
+        },
+        {
+          "ref": "refs/heads/main",
+          "sha": "d0e58e8b0d0d4f546754c1a12fc81531daa6e6b7"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.17.1",
+          "sha": "31516790679c2ab591105d11e6fd15e974b72505",
+          "type": "commit"
+        },
+        {
+          "ref": "refs/tags/v0.17.2",
+          "sha": "8480eb38e059d575cb5dafd740ed14f035d20936",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/Markdown-for-Nanobug/compare/31516790679c2ab591105d11e6fd15e974b72505...main",
+        "status": "ahead",
+        "ahead_by": 6,
+        "behind_by": 0,
+        "total_commits": 6,
+        "base_sha": "31516790679c2ab591105d11e6fd15e974b72505",
+        "merge_base_sha": "31516790679c2ab591105d11e6fd15e974b72505"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [
+        {
+          "number": 1,
+          "state": "closed",
+          "is_pull_request": true,
+          "url": "https://github.com/T-miracle/Markdown-for-Nanobug/pull/1"
+        }
+      ],
+      "legacy_releases": [
+        {
+          "id": 409476609,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-Markdown/releases/tag/v0.17.1",
+          "tag_name": "v0.17.1",
+          "name": "Markdown 0.17.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:10Z",
+          "published_at": "2026-10-11T06:38:32Z",
+          "body": "# Markdown 0.17.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `markdown`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `31516790679c2ab591105d11e6fd15e974b72505`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630006852,
+              "name": "markdown-0.17.1.zip",
+              "size": 615054,
+              "digest": "sha256:2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:38:33Z",
+              "updated_at": "2026-10-11T06:38:34Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Markdown/releases/download/v0.17.1/markdown-0.17.1.zip"
+            },
+            {
+              "id": 630006892,
+              "name": "markdown-0.17.1.zip.sha256",
+              "size": 86,
+              "digest": "sha256:b4b712828b5d3d7f885e80e8a3a36e8d4f50d4e2b5a88b9b620fcd617538f625",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:38:35Z",
+              "updated_at": "2026-10-11T06:38:35Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Markdown/releases/download/v0.17.1/markdown-0.17.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409507870,
+          "url": "https://github.com/T-miracle/Markdown-for-Nanobug/releases/tag/v0.17.1",
+          "tag_name": "v0.17.1",
+          "name": "Markdown for Nanobug 0.17.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:10Z",
+          "published_at": "2026-10-11T07:38:38Z",
+          "body": "# Markdown for Nanobug 0.17.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `markdown`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `31516790679c2ab591105d11e6fd15e974b72505`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630116607,
+              "name": "markdown-0.17.1.zip",
+              "size": 615054,
+              "digest": "sha256:2438a081165de70acf0c30c560905167d46b44a5c30d7abf856fa420a14a17a3",
+              "download_count": 19,
+              "created_at": "2026-10-11T07:38:39Z",
+              "updated_at": "2026-10-11T07:38:40Z",
+              "browser_download_url": "https://github.com/T-miracle/Markdown-for-Nanobug/releases/download/v0.17.1/markdown-0.17.1.zip"
+            },
+            {
+              "id": 630116664,
+              "name": "markdown-0.17.1.zip.sha256",
+              "size": 86,
+              "digest": "sha256:b4b712828b5d3d7f885e80e8a3a36e8d4f50d4e2b5a88b9b620fcd617538f625",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:41Z",
+              "updated_at": "2026-10-11T07:38:41Z",
+              "browser_download_url": "https://github.com/T-miracle/Markdown-for-Nanobug/releases/download/v0.17.1/markdown-0.17.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-Rust",
+      "legacy_repository_id": "1414014919",
+      "current_repository_at_verification": "T-miracle/Rust-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.6.1",
+          "sha": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "2b86a7e8ba966267aca83629143c0db8d3024eab"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.6.1",
+          "sha": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/Rust-for-Nanobug/compare/942a905e4d4dfe02a9b9b162c35e3c2788691d5f...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f",
+        "merge_base_sha": "942a905e4d4dfe02a9b9b162c35e3c2788691d5f"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409476719,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-Rust/releases/tag/v0.6.1",
+          "tag_name": "v0.6.1",
+          "name": "Rust 0.6.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:11Z",
+          "published_at": "2026-10-11T06:38:45Z",
+          "body": "# Rust 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `rust`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `942a905e4d4dfe02a9b9b162c35e3c2788691d5f`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630007147,
+              "name": "rust-0.6.1.zip",
+              "size": 720356,
+              "digest": "sha256:9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:38:46Z",
+              "updated_at": "2026-10-11T06:38:47Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Rust/releases/download/v0.6.1/rust-0.6.1.zip"
+            },
+            {
+              "id": 630007194,
+              "name": "rust-0.6.1.zip.sha256",
+              "size": 81,
+              "digest": "sha256:13da69601a9333f6e5ddc608ffbcaa512010700fd159025659f97e791f18abb6",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:38:48Z",
+              "updated_at": "2026-10-11T06:38:49Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Rust/releases/download/v0.6.1/rust-0.6.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409507920,
+          "url": "https://github.com/T-miracle/Rust-for-Nanobug/releases/tag/v0.6.1",
+          "tag_name": "v0.6.1",
+          "name": "Rust for Nanobug 0.6.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:11Z",
+          "published_at": "2026-10-11T07:38:42Z",
+          "body": "# Rust for Nanobug 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `rust`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `942a905e4d4dfe02a9b9b162c35e3c2788691d5f`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630116738,
+              "name": "rust-0.6.1.zip",
+              "size": 720356,
+              "digest": "sha256:9da637f2852318c51fb7b008c1abaefe4848a1d0896d6205210558a561de6867",
+              "download_count": 20,
+              "created_at": "2026-10-11T07:38:44Z",
+              "updated_at": "2026-10-11T07:38:44Z",
+              "browser_download_url": "https://github.com/T-miracle/Rust-for-Nanobug/releases/download/v0.6.1/rust-0.6.1.zip"
+            },
+            {
+              "id": 630116774,
+              "name": "rust-0.6.1.zip.sha256",
+              "size": 81,
+              "digest": "sha256:13da69601a9333f6e5ddc608ffbcaa512010700fd159025659f97e791f18abb6",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:45Z",
+              "updated_at": "2026-10-11T07:38:46Z",
+              "browser_download_url": "https://github.com/T-miracle/Rust-for-Nanobug/releases/download/v0.6.1/rust-0.6.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-Image",
+      "legacy_repository_id": "1414015038",
+      "current_repository_at_verification": "T-miracle/Image-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "cac09895b6bc9cd227a6e318edb8c868da41084e"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.6.1",
+          "sha": "cac09895b6bc9cd227a6e318edb8c868da41084e",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "a2d95df635ed875e142f7b3e03852765404a3508"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.6.1",
+          "sha": "cac09895b6bc9cd227a6e318edb8c868da41084e",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/Image-for-Nanobug/compare/cac09895b6bc9cd227a6e318edb8c868da41084e...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "cac09895b6bc9cd227a6e318edb8c868da41084e",
+        "merge_base_sha": "cac09895b6bc9cd227a6e318edb8c868da41084e"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409477626,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-Image/releases/tag/v0.6.1",
+          "tag_name": "v0.6.1",
+          "name": "Image 0.6.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:11Z",
+          "published_at": "2026-10-11T06:40:40Z",
+          "body": "# Image 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `svg`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `cac09895b6bc9cd227a6e318edb8c868da41084e`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630010228,
+              "name": "svg-0.6.1.zip",
+              "size": 544488,
+              "digest": "sha256:911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:40:41Z",
+              "updated_at": "2026-10-11T06:40:42Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Image/releases/download/v0.6.1/svg-0.6.1.zip"
+            },
+            {
+              "id": 630010268,
+              "name": "svg-0.6.1.zip.sha256",
+              "size": 80,
+              "digest": "sha256:7e466f595e8a7f76093d0e6f9aeeff95c1b1d6a92e4d0ed5b330e4d19e0929f0",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:40:43Z",
+              "updated_at": "2026-10-11T06:40:43Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-Image/releases/download/v0.6.1/svg-0.6.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409507963,
+          "url": "https://github.com/T-miracle/Image-for-Nanobug/releases/tag/v0.6.1",
+          "tag_name": "v0.6.1",
+          "name": "Image for Nanobug 0.6.1",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:11Z",
+          "published_at": "2026-10-11T07:38:47Z",
+          "body": "# Image for Nanobug 0.6.1\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `svg`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `cac09895b6bc9cd227a6e318edb8c868da41084e`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630116874,
+              "name": "svg-0.6.1.zip",
+              "size": 544488,
+              "digest": "sha256:911932c643bc9b7a538b3f4b5baa34e04a939256b61ee49bf6d2f9e84656a654",
+              "download_count": 20,
+              "created_at": "2026-10-11T07:38:49Z",
+              "updated_at": "2026-10-11T07:38:49Z",
+              "browser_download_url": "https://github.com/T-miracle/Image-for-Nanobug/releases/download/v0.6.1/svg-0.6.1.zip"
+            },
+            {
+              "id": 630116940,
+              "name": "svg-0.6.1.zip.sha256",
+              "size": 80,
+              "digest": "sha256:7e466f595e8a7f76093d0e6f9aeeff95c1b1d6a92e4d0ed5b330e4d19e0929f0",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:51Z",
+              "updated_at": "2026-10-11T07:38:51Z",
+              "browser_download_url": "https://github.com/T-miracle/Image-for-Nanobug/releases/download/v0.6.1/svg-0.6.1.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-TOML",
+      "legacy_repository_id": "1414015156",
+      "current_repository_at_verification": "T-miracle/TOML-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.2.3",
+          "sha": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "79e96b5de1158b8c710c5d3df067757fa008b469"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.2.3",
+          "sha": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/TOML-for-Nanobug/compare/a1a4677118403ac01e6a0fd2f667cfa788aa9bd2...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2",
+        "merge_base_sha": "a1a4677118403ac01e6a0fd2f667cfa788aa9bd2"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409477952,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-TOML/releases/tag/v0.2.3",
+          "tag_name": "v0.2.3",
+          "name": "TOML 0.2.3",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:12Z",
+          "published_at": "2026-10-11T06:41:19Z",
+          "body": "# TOML 0.2.3\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `toml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `a1a4677118403ac01e6a0fd2f667cfa788aa9bd2`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630011399,
+              "name": "toml-0.2.3.zip",
+              "size": 14124,
+              "digest": "sha256:2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:41:21Z",
+              "updated_at": "2026-10-11T06:41:21Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-TOML/releases/download/v0.2.3/toml-0.2.3.zip"
+            },
+            {
+              "id": 630011443,
+              "name": "toml-0.2.3.zip.sha256",
+              "size": 81,
+              "digest": "sha256:201f43894dcaf3ebd5ea207fca350f210b6fd40076839aeb684e501f3643f23e",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:41:22Z",
+              "updated_at": "2026-10-11T06:41:22Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-TOML/releases/download/v0.2.3/toml-0.2.3.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409508020,
+          "url": "https://github.com/T-miracle/TOML-for-Nanobug/releases/tag/v0.2.3",
+          "tag_name": "v0.2.3",
+          "name": "TOML for Nanobug 0.2.3",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:12Z",
+          "published_at": "2026-10-11T07:38:52Z",
+          "body": "# TOML for Nanobug 0.2.3\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `toml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `a1a4677118403ac01e6a0fd2f667cfa788aa9bd2`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630117014,
+              "name": "toml-0.2.3.zip",
+              "size": 14124,
+              "digest": "sha256:2b3dabe0b2f67b2ed2440fe5eb8e7ac2b3e408105accc2f7bbdc9a2ccf6ebeed",
+              "download_count": 27,
+              "created_at": "2026-10-11T07:38:54Z",
+              "updated_at": "2026-10-11T07:38:54Z",
+              "browser_download_url": "https://github.com/T-miracle/TOML-for-Nanobug/releases/download/v0.2.3/toml-0.2.3.zip"
+            },
+            {
+              "id": 630117068,
+              "name": "toml-0.2.3.zip.sha256",
+              "size": 81,
+              "digest": "sha256:201f43894dcaf3ebd5ea207fca350f210b6fd40076839aeb684e501f3643f23e",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:38:55Z",
+              "updated_at": "2026-10-11T07:38:55Z",
+              "browser_download_url": "https://github.com/T-miracle/TOML-for-Nanobug/releases/download/v0.2.3/toml-0.2.3.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    },
+    {
+      "legacy_repository": "T-miracle/Nanobug-Plugin-XML",
+      "legacy_repository_id": "1414015264",
+      "current_repository_at_verification": "T-miracle/XML-for-Nanobug",
+      "legacy_metadata": {
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "has_wiki": false,
+        "has_discussions": false,
+        "has_pages": false,
+        "open_issues_count": 0
+      },
+      "legacy_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "69749e0d37ca28571e39101678f77a051a939ca8"
+        }
+      ],
+      "legacy_tags": [
+        {
+          "ref": "refs/tags/v0.2.2",
+          "sha": "69749e0d37ca28571e39101678f77a051a939ca8",
+          "type": "commit"
+        }
+      ],
+      "current_heads": [
+        {
+          "ref": "refs/heads/main",
+          "sha": "0c6317eb0e31b0c19a8a2df4743d6acfce5c0d68"
+        }
+      ],
+      "current_tags": [
+        {
+          "ref": "refs/tags/v0.2.2",
+          "sha": "69749e0d37ca28571e39101678f77a051a939ca8",
+          "type": "commit"
+        }
+      ],
+      "compare": {
+        "url": "https://api.github.com/repos/T-miracle/XML-for-Nanobug/compare/69749e0d37ca28571e39101678f77a051a939ca8...main",
+        "status": "ahead",
+        "ahead_by": 1,
+        "behind_by": 0,
+        "total_commits": 1,
+        "base_sha": "69749e0d37ca28571e39101678f77a051a939ca8",
+        "merge_base_sha": "69749e0d37ca28571e39101678f77a051a939ca8"
+      },
+      "legacy_issues_and_pull_requests": [],
+      "current_issue_and_pull_request_summary": [],
+      "legacy_releases": [
+        {
+          "id": 409478007,
+          "url": "https://github.com/T-miracle/Nanobug-Plugin-XML/releases/tag/v0.2.2",
+          "tag_name": "v0.2.2",
+          "name": "XML 0.2.2",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:13Z",
+          "published_at": "2026-10-11T06:41:27Z",
+          "body": "# XML 0.2.2\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `xml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `69749e0d37ca28571e39101678f77a051a939ca8`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n",
+          "assets": [
+            {
+              "id": 630011566,
+              "name": "xml-0.2.2.zip",
+              "size": 647240,
+              "digest": "sha256:c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a",
+              "download_count": 2,
+              "created_at": "2026-10-11T06:41:28Z",
+              "updated_at": "2026-10-11T06:41:28Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-XML/releases/download/v0.2.2/xml-0.2.2.zip"
+            },
+            {
+              "id": 630011603,
+              "name": "xml-0.2.2.zip.sha256",
+              "size": 80,
+              "digest": "sha256:7065c6467b4de16fe7fc7b35809000adb18a338af24406b542a9af40faa3ff44",
+              "download_count": 0,
+              "created_at": "2026-10-11T06:41:29Z",
+              "updated_at": "2026-10-11T06:41:30Z",
+              "browser_download_url": "https://github.com/T-miracle/Nanobug-Plugin-XML/releases/download/v0.2.2/xml-0.2.2.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "corresponding_current_releases": [
+        {
+          "id": 409508068,
+          "url": "https://github.com/T-miracle/XML-for-Nanobug/releases/tag/v0.2.2",
+          "tag_name": "v0.2.2",
+          "name": "XML for Nanobug 0.2.2",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-10-11T06:34:13Z",
+          "published_at": "2026-10-11T07:38:57Z",
+          "body": "# XML for Nanobug 0.2.2\n\n- Publish the existing plugin from its independent official repository using the pinned public Nanobug SDK.\n- Preserve installation ID `xml`, settings and private data; include standalone build instructions and the original license notices.\n- This release changes distribution metadata and packaged documentation. It does not redesign plugin business behavior.\n\nSource commit: `69749e0d37ca28571e39101678f77a051a939ca8`  \nPublic host / SDK: `b77e6317bf7e3d3d3d0fe9490cabd362d266e0a5`  \nZIP SHA-256: `c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a`\n\nThe checksum covers the complete published ZIP. Later rebuilds may produce different bytes and must not replace this attachment. Marketplace admission requires a separate reviewed PR.\n\nThe repository name now follows the maintainer's `X-for-Nanobug` naming convention. The source tag, installation ID, version, ZIP filename and complete ZIP bytes are preserved from the verified release.\n",
+          "assets": [
+            {
+              "id": 630117223,
+              "name": "xml-0.2.2.zip",
+              "size": 647240,
+              "digest": "sha256:c6bde8af6e724d2c9570502293f4e9d024137761759205baffb6f10a8bd3dd8a",
+              "download_count": 19,
+              "created_at": "2026-10-11T07:38:58Z",
+              "updated_at": "2026-10-11T07:38:58Z",
+              "browser_download_url": "https://github.com/T-miracle/XML-for-Nanobug/releases/download/v0.2.2/xml-0.2.2.zip"
+            },
+            {
+              "id": 630117253,
+              "name": "xml-0.2.2.zip.sha256",
+              "size": 80,
+              "digest": "sha256:7065c6467b4de16fe7fc7b35809000adb18a338af24406b542a9af40faa3ff44",
+              "download_count": 0,
+              "created_at": "2026-10-11T07:39:00Z",
+              "updated_at": "2026-10-11T07:39:00Z",
+              "browser_download_url": "https://github.com/T-miracle/XML-for-Nanobug/releases/download/v0.2.2/xml-0.2.2.zip.sha256"
+            }
+          ]
+        }
+      ],
+      "checks": {
+        "legacy_has_one_main_and_one_lightweight_tag": true,
+        "legacy_main_is_current_ancestor": true,
+        "all_legacy_tags_preserved": true,
+        "all_legacy_assets_match_current_by_name_size_digest": true,
+        "release_body_after_title_preserved": true,
+        "legacy_all_state_issue_and_pr_count": 0
+      }
+    }
+  ],
+  "conclusion": "No legacy-only reachable branch/tag history, release asset bytes, issues or pull requests were found. Legacy repository/release/asset IDs, original publication timestamps and download counts are retained here as public historical metadata. Reverify destination refs, assets and download availability after transfers before authorized deletion.",
+  "limitations": [
+    "Release asset equality is based on GitHub-reported SHA-256 digests and size, not fresh binary downloads.",
+    "This audit is a point-in-time read-only observation and does not authorize or attest to deletion."
+  ]
+}

@@ -1,7 +1,8 @@
 {
   "id": "html",
-  "repository": "T-miracle/HTML-for-Nanobug",
+  "repository": "Nanobug-Editor/HTML",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "HTML recognition, highlighting, completion, formatting and paired tag editing.",

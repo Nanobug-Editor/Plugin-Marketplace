@@ -1,7 +1,8 @@
 {
   "id": "toml",
-  "repository": "T-miracle/TOML-for-Nanobug",
+  "repository": "Nanobug-Editor/TOML",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "TOML recognition, highlighting and file icons.",
