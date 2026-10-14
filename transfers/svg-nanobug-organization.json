@@ -1,0 +1,12 @@
+{
+  "id": "svg",
+  "from_repository": "T-miracle/Image-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/Image",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

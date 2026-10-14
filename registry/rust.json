@@ -1,7 +1,8 @@
 {
   "id": "rust",
-  "repository": "T-miracle/Rust-for-Nanobug",
+  "repository": "Nanobug-Editor/Rust",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "Rust recognition and language services, Cargo configurations and the merged debugger.",

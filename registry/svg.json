@@ -1,7 +1,8 @@
 {
   "id": "svg",
-  "repository": "T-miracle/Image-for-Nanobug",
+  "repository": "Nanobug-Editor/Image",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "Native SVG source preview and PNG, JPEG, GIF and WebP image display.",

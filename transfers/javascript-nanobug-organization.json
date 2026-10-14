@@ -1,0 +1,12 @@
+{
+  "id": "javascript",
+  "from_repository": "T-miracle/JavaScript-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/JavaScript",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

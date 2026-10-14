@@ -1,0 +1,12 @@
+{
+  "id": "markdown",
+  "from_repository": "T-miracle/Markdown-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/Markdown",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

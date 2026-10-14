@@ -1,7 +1,8 @@
 {
   "id": "markdown",
-  "repository": "T-miracle/Markdown-for-Nanobug",
+  "repository": "Nanobug-Editor/Markdown",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "Markdown source editing, native preview, format toolbar and synchronized scrolling.",

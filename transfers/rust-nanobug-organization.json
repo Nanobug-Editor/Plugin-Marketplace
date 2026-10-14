@@ -1,0 +1,12 @@
+{
+  "id": "rust",
+  "from_repository": "T-miracle/Rust-for-Nanobug",
+  "from_maintainers": [
+    "T-miracle"
+  ],
+  "to_repository": "Nanobug-Editor/Rust",
+  "to_maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ]
+}

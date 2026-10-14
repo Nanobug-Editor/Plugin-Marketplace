@@ -1,7 +1,8 @@
 {
   "id": "javascript",
-  "repository": "T-miracle/JavaScript-for-Nanobug",
+  "repository": "Nanobug-Editor/JavaScript",
   "maintainers": [
+    "Nanobug-Editor",
     "T-miracle"
   ],
   "summary": "JavaScript recognition, highlighting and independent formatting.",
