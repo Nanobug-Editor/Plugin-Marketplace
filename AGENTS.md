@@ -1,6 +1,6 @@
 # Nanobug Plugin Marketplace 协作规范
 
-默认使用简体中文沟通；项目英文名和 GitHub 仓库名为 Nanobug-Plugin-Marketplace。代码标识符遵循所在模块风格。用户当前明确要求优先；修改子目录前检查更具体的 AGENTS.md。
+默认使用简体中文沟通；GitHub 仓库为 Nanobug-Editor/Plugin-Marketplace。代码标识符遵循所在模块风格。用户当前明确要求优先；修改子目录前检查更具体的 AGENTS.md。
 
 ## 开始工作
 
@@ -41,7 +41,7 @@
 
 ## Git 与议题
 
-- 当前跟踪器为 T-miracle/Nanobug-Plugin-Marketplace；[发布约定](docs/agents/issue-tracker.md)与[标签](docs/agents/triage-labels.md)约束后续操作。
+- 当前跟踪器为 Nanobug-Editor/Plugin-Marketplace；[发布约定](docs/agents/issue-tracker.md)与[标签](docs/agents/triage-labels.md)约束后续操作。
 - 发布前按稳定标识查重，保存真实 ID；按依赖发布，用原生 blocked_by 关系并读回核对。ready-for-agent 不表示依赖已完成。
 - 原 Nanobug #100 仅留历史，不改写或关闭；新父规格也不因拆单关闭。每单完成依据是验收和实际交付，不是文档存在。
 - 用户已授权本次项目建立、文档迁入、普通提交推送及规格/工单发布；不自动授权开始实现、创建七个插件仓库、发布插件版本或启用 Pages。

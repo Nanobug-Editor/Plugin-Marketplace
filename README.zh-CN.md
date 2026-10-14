@@ -34,15 +34,15 @@ python -m unittest discover -s tests -v
 # 构建空目录；已有插件记录时追加 --validator <inspect_package.exe>。
 python marketplace.py --output dist
 # 仅统计收录的 Release ZIP 附件；API 失败时保留历史统计。
-python market_statistics.py --catalog dist/catalog.json --previous-url https://t-miracle.github.io/Nanobug-Plugin-Marketplace/stats.json --output dist/stats.json
+python market_statistics.py --catalog dist/catalog.json --previous-url https://nanobug-editor.github.io/Plugin-Marketplace/stats.json --output dist/stats.json
 ```
 
 通过 PR 提交[注册记录](registry/README.md)，每个版本均需人工审核。[归属转移](transfers/README.md)单独审核。PR 校验使用基线构建器及固定 Nanobug `Package` 校验器，不运行访客代码。在 Nanobug 仓库检出 `.github/validator.json` 固定的提交，以 `cargo build --locked -p plugin-runtime --example inspect_package` 构建校验器。
 
 Actions 向可信构建器提供只读 `GH_TOKEN`，仅用于 `https://api.github.com` 的公开元数据。API 重定向必须保持同一来源，Release ZIP 请求不携带该凭据。本地验证也可不提供凭据，但会受到 GitHub 未认证 API 限流约束。
 
-`Reviewed catalog` 工作流仅将 main 数据发布至 [catalog.json](https://t-miracle.github.io/Nanobug-Plugin-Marketplace/catalog.json)。Pages 来源须设为 **GitHub Actions**，仅上传 `dist/`，不建设独立网站。首个真实插件通过审核前，注册表保持为空；受控测试插件不发布。
+`Reviewed catalog` 工作流仅将 main 数据发布至 [catalog.json](https://nanobug-editor.github.io/Plugin-Marketplace/catalog.json)。Pages 来源须设为 **GitHub Actions**，仅上传 `dist/`，不建设独立网站。首个真实插件通过审核前，注册表保持为空；受控测试插件不发布。
 
 原生客户端缓存目录及最后成功获取时间。刷新失败时禁止市场新装和升级，成功后恢复。详情不加载 Markdown 内嵌图片、不解析 SVG 外部文件或网络引用；源码和反馈按钮打开已校验的 GitHub 仓库。首装须经过用户确认、SHA-256 与清单一致性、兼容性及信任检查；已安装插件只允许升至更高兼容稳定版，新增权限再次确认。启动后及运行约六小时异步检查，不自动下载更新；标题栏红点在没有可用升级时才清除。
 
-工作流目标每六小时测量下载量，独立发布 [stats.json](https://t-miracle.github.io/Nanobug-Plugin-Marketplace/stats.json)。次数包含重复及市场外下载，不等于安装人数。API 失败保留旧值和时间，未测量次数显示暂不可用；统计失败不阻止安装。格式见[静态数据契约](docs/specs/static-data-contract.md)。
+工作流目标每六小时测量下载量，独立发布 [stats.json](https://nanobug-editor.github.io/Plugin-Marketplace/stats.json)。次数包含重复及市场外下载，不等于安装人数。API 失败保留旧值和时间，未测量次数显示暂不可用；统计失败不阻止安装。格式见[静态数据契约](docs/specs/static-data-contract.md)。

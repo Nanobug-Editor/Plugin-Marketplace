@@ -71,7 +71,7 @@ jobs:
         run: |
           # A reviewed withdrawal may outlive its Release ZIP; keep its immutable detail snapshot.
           try {
-            Invoke-WebRequest -Uri 'https://t-miracle.github.io/Nanobug-Plugin-Marketplace/catalog.json' -OutFile previous-catalog.json
+            Invoke-WebRequest -Uri 'https://nanobug-editor.github.io/Plugin-Marketplace/catalog.json' -OutFile previous-catalog.json
           } catch {
             if (Test-Path previous-catalog.json) { Remove-Item -LiteralPath previous-catalog.json }
             Write-Output 'No published catalog snapshot is available yet.'
@@ -96,7 +96,7 @@ jobs:
       - uses: actions/checkout@v6
         if: steps.candidates.outputs.present == 'true'
         with:
-          repository: T-miracle/Nanobug
+          repository: Nanobug-Editor/Editor
           ref: ${{ steps.validator.outputs.revision }}
           path: validator
           persist-credentials: false
@@ -131,7 +131,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # Statistics fail soft and retain the previously published timestamp and counts.
-          python trusted/market_statistics.py --catalog dist/catalog.json --previous-url https://t-miracle.github.io/Nanobug-Plugin-Marketplace/stats.json --output dist/stats.json
+          python trusted/market_statistics.py --catalog dist/catalog.json --previous-url https://nanobug-editor.github.io/Plugin-Marketplace/stats.json --output dist/stats.json
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - uses: actions/upload-pages-artifact@v4
         if: github.event_name != 'pull_request'

@@ -1,8 +1,8 @@
 # 议题跟踪器
 
-仓库：[T-miracle/Nanobug-Plugin-Marketplace](https://github.com/T-miracle/Nanobug-Plugin-Marketplace)。
+仓库：[Nanobug-Editor/Plugin-Marketplace](https://github.com/Nanobug-Editor/Plugin-Marketplace)。
 
-2026-10-09 用户批准四张粗粒度工单及直接阻塞边，并要求在独立市场仓库发布方案与工单。原 [Nanobug #100](https://github.com/T-miracle/Nanobug/issues/100) 保留历史，本仓库议题承载后续执行。
+2026-10-09 用户批准四张粗粒度工单及直接阻塞边，并要求在独立市场仓库发布方案与工单。原 [Nanobug #100](https://github.com/Nanobug-Editor/Editor/issues/100) 保留历史，本仓库议题承载后续执行。
 
 ## 发布与幂等
 
