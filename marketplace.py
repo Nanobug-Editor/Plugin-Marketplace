@@ -84,6 +84,9 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=(), baselin
     `fetch` returns JSON for api.github.com and bytes for Release assets. It must
     enforce HTTPS and bounded reads. Failures abort the complete publication.
     Ownership changes use a separate, manually reviewed transfer before versions.
+    `baseline` and `baseline_catalog` are trusted records and published snapshots;
+    matching historical versions retain their original review when the current
+    Package validator drops an older capability. New or unmatched ZIPs use `validate`.
     """
     previous = {e["id"]: e for e in baseline}
     previous_snapshots = {e["id"]: e for e in (baseline_catalog or {}).get("plugins", [])}
@@ -98,13 +101,13 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=(), baselin
         require(maintainers and all(re.fullmatch(r"[A-Za-z0-9-]+", m) for m in maintainers), "maintainers required")
         require(entry["category"] and entry["summary"] and isinstance(entry["tags"], list), "listing metadata required")
         old = previous.get(identity)
+        old_versions = {v["version"]: v for v in old["versions"]} if old else {}
         if old:
             if old["repository"] != repo or old["maintainers"] != maintainers:
                 transfer = {"id": identity, "from_repository": old["repository"], "from_maintainers": old["maintainers"],
                             "to_repository": repo, "to_maintainers": maintainers}
                 require(transfer in transfers and old["versions"] == entry["versions"],
                         "ownership changes require separate transfer review without version changes")
-            old_versions = {v["version"]: v for v in old["versions"]}
             new_versions = {v["version"]: v for v in entry["versions"]}
             for version, record in old_versions.items():
                 candidate = new_versions.get(version)
@@ -133,17 +136,26 @@ def build_catalog(entries, baseline, fetch, validate=None, transfers=(), baselin
             require(isinstance(withdrawn, bool), "withdrawn must be boolean")
             require((withdrawn and isinstance(reason, str) and 0 < len(reason.encode()) <= 1024)
                     or (not withdrawn and reason is None), "withdrawal requires a reason")
+            prior = previous_snapshots.get(identity, {})
+            prior_versions = {v["version"]: v for v in prior.get("versions", [])}
+            snapshot = prior_versions.get(version)
+            reviewed_snapshot = (version in old_versions and prior.get("repository") == repo
+                                 and snapshot and snapshot.get("sha256") == release["sha256"]
+                                 and snapshot.get("commit") == commit
+                                 and snapshot.get("manifest", {}).get("id") == identity
+                                 and snapshot.get("manifest", {}).get("version") == version
+                                 and snapshot.get("published_at") == release["published_at"]
+                                 and snapshot.get("changelog") == release["changelog"])
             if withdrawn:
                 # A prior published snapshot is the only source for a now-deleted ZIP.
-                prior = previous_snapshots.get(identity, {})
-                prior_versions = {v["version"]: v for v in prior.get("versions", [])}
-                snapshot = prior_versions.get(version)
-                require(old and version in old_versions and prior.get("repository") == repo
-                        and snapshot and snapshot["sha256"] == release["sha256"]
-                        and snapshot["commit"] == commit
-                        and snapshot["manifest"]["id"] == identity,
+                require(reviewed_snapshot,
                         "withdrawal requires the reviewed published snapshot")
                 versions.append(dict(snapshot, withdrawn=True, withdrawal_reason=reason))
+                continue
+            if reviewed_snapshot:
+                # A newer host may reject old capabilities; immutable historical data is not re-admitted.
+                # Registry immutability above and snapshot identity prevent this path accepting new versions.
+                versions.append(dict(snapshot, withdrawn=False, withdrawal_reason=None))
                 continue
             license_info = fetch(api + "/license?ref=" + commit)
             license_id = license_info["license"]["spdx_id"]

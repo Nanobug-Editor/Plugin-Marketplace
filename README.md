@@ -39,6 +39,8 @@ python market_statistics.py --catalog dist/catalog.json --previous-url https://n
 
 Submit a [registry record](registry/README.md) through a pull request. Every version requires human review. Ownership transfers use a [separate review](transfers/README.md). PR validation uses the trusted base builder and a pinned Nanobug `Package` validator; it never runs guest code. Build that validator from the revision in `.github/validator.json` with `cargo build --locked -p plugin-runtime --example inspect_package` in the Nanobug repository.
 
+Unchanged reviewed versions retain their matching published snapshots across host capability upgrades. Every new version still passes current Package validation; a catalog snapshot alone cannot establish prior review.
+
 Actions gives the trusted builder a read-only `GH_TOKEN` for public metadata on `https://api.github.com`. API redirects must stay on that origin; Release ZIP requests never carry this token. Local validation also works without a token, subject to GitHub's unauthenticated API limit.
 
 The `Reviewed catalog` workflow publishes only main-branch data to [catalog.json](https://nanobug-editor.github.io/Plugin-Marketplace/catalog.json). Pages must use **GitHub Actions** as its source. Only `dist/` is uploaded; there is no separate website. The registry starts empty until a real plugin passes review; controlled test packages are not published.

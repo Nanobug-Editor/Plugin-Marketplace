@@ -26,8 +26,10 @@ Submit one stable version per plugin in a PR, starting from this shape. A relate
 
 Use an SPDX-recognized open-source license at the pinned source commit. The repository owner must be among the maintainers. The reviewer must verify that the PR submitter controls that account/repository; listing a name does not prove ownership. For organizations, obtain an acknowledged organization maintainer review.
 
-Every new version must be included in a fresh registry PR and receive individual human review. Do not alter or remove existing version records. The validator resolves the tag to the pinned commit, checks the exact ZIP asset, verifies its digest and inspects it using Nanobug's public Package validator. It never runs plugin code. Source/build provenance and requested permission necessity still require review.
+Every new version must be included in a fresh registry PR and receive individual human review. Do not alter or remove existing version records. For new versions, the validator resolves the tag to the pinned commit, checks the exact ZIP asset, verifies its digest and inspects it using Nanobug's public Package validator. It never runs plugin code. Source/build provenance and requested permission necessity still require review.
 PR checks compare the candidate against the trusted base branch. Push and manual publication compare against the registry at the last successful Pages deployment. Rejected pushes cannot advance that baseline, so a later no-op push or manual run cannot silently change a published version.
+
+An unchanged reviewed version retains its matching published detail snapshot when the current host drops an older capability. The trusted registry baseline must already contain that version, and repository, version, manifest identity, source commit, digest, release time and notes must match. A new version cannot reuse a snapshot merely present in a catalog. Missing or mismatched snapshots require normal current validation; withdrawals still require their reviewed snapshot.
 
 Ownership transfers require a **separate PR with no version changes**, acknowledgments from the previous and new owners, and a JSON receipt in `transfers/` containing `id`, `from_repository`, `from_maintainers`, `to_repository`, `to_maintainers`. New versions follow only after the transfer merges. Never reuse an identity for unrelated code.
 

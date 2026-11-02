@@ -14,32 +14,32 @@ from marketplace import build_catalog
 class RegistryTests(unittest.TestCase):
     """Keep package bytes real; replace only the GitHub network boundary."""
 
-    def fixture(self):
-        """Build one stable-byte contract fixture shared by every failure scenario."""
-        manifest = b'{"id":"test.notes","name":"Notes","version":"1.0.0","protocol":7,"api":{"base":"^1"},"contributions":"plugin.toml","storage_limit":1024}'
+    def fixture(self, version="1.0.0", commit="a" * 40):
+        """Return a real ZIP and matching GitHub records for the requested version/commit."""
+        manifest = b'{"id":"test.notes","name":"Notes","version":"1.0.0","protocol":7,"api":{"base":"^1"},"contributions":"plugin.toml","storage_limit":1024}'.replace(b'"1.0.0"', json.dumps(version).encode())
         archive = io.BytesIO()
         with zipfile.ZipFile(archive, "w") as package:
             package.writestr(zipfile.ZipInfo("manifest.json"), manifest)
-            package.writestr(zipfile.ZipInfo("plugin.toml"), '[plugin]\nid="test.notes"\nname="Notes"\nversion="1.0.0"\nhost_version=">=0.1.0"\n')
+            package.writestr(zipfile.ZipInfo("plugin.toml"), '[plugin]\nid="test.notes"\nname="Notes"\nversion="' + version + '"\nhost_version=">=0.1.0"\n')
             package.writestr(zipfile.ZipInfo("README.md"), "# Notes\nOriginal author documentation.\n\n" + "Long original text / 插件原文。\n\n" * 160)
             package.writestr(zipfile.ZipInfo("icon.svg"), '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#4682b4" d="M2 2h20v20H2z"/></svg>')
         payload = archive.getvalue()
         entry = {
             "id": "test.notes", "repository": "author/notes", "maintainers": ["author"],
             "summary": "A notes plugin", "category": "tools", "tags": ["notes"],
-            "versions": [{"version": "1.0.0", "commit": "a" * 40,
-                          "tag": "v1.0.0", "asset": "notes.zip", "published_at": "2026-10-10T00:00:00Z", "changelog": "First release",
+            "versions": [{"version": version, "commit": commit,
+                          "tag": "v" + version, "asset": "notes.zip", "published_at": "2026-10-10T00:00:00Z", "changelog": "First release",
                           "sha256": hashlib.sha256(payload).hexdigest()}],
         }
         responses = {
             "https://api.github.com/repos/author/notes": {"private": False, "owner": {"login": "author"}},
-            "https://api.github.com/repos/author/notes/license?ref=" + "a" * 40: {"license": {"spdx_id": "MIT"}},
-            "https://api.github.com/repos/author/notes/commits/v1.0.0": {"sha": "a" * 40},
-            "https://api.github.com/repos/author/notes/releases/tags/v1.0.0": {
+            "https://api.github.com/repos/author/notes/license?ref=" + commit: {"license": {"spdx_id": "MIT"}},
+            "https://api.github.com/repos/author/notes/commits/v" + version: {"sha": commit},
+            "https://api.github.com/repos/author/notes/releases/tags/v" + version: {
                 "draft": False, "prerelease": False, "published_at": "2026-10-10T00:00:00Z",
                 "body": "First release", "assets": [{"name": "notes.zip", "id": 123,
-                    "browser_download_url": "https://github.com/author/notes/releases/download/v1.0.0/notes.zip"}]},
-            "https://github.com/author/notes/releases/download/v1.0.0/notes.zip": payload,
+                    "browser_download_url": "https://github.com/author/notes/releases/download/v" + version + "/notes.zip"}]},
+            "https://github.com/author/notes/releases/download/v" + version + "/notes.zip": payload,
         }
         return entry, responses, payload
 
@@ -68,6 +68,63 @@ class RegistryTests(unittest.TestCase):
         changed = dict(entry, maintainers=["other"])
         with self.assertRaisesRegex(ValueError, "transfer"):
             build_catalog([changed], [entry], responses.__getitem__)
+
+    def test_reviewed_snapshot_survives_validator_capability_upgrade(self):
+        """Changing host capabilities cannot rewrite or discard an immutable reviewed version."""
+        entry, responses, _ = self.fixture()
+        previous = build_catalog([entry], [], responses.__getitem__)
+
+        def current_validator(payload):
+            """Model a current Package reader rejecting the old layout capability."""
+            raise ValueError("Required capability unavailable: editor.layout ^1")
+
+        catalog = build_catalog([entry], [entry], responses.__getitem__,
+                                validate=current_validator, baseline_catalog=previous)
+        self.assertEqual(catalog, previous)
+
+    def test_new_version_cannot_reuse_a_published_snapshot(self):
+        """A snapshot outside the trusted registry baseline cannot bypass current admission."""
+        entry, responses, _ = self.fixture()
+        previous = build_catalog([entry], [], responses.__getitem__)
+        new_entry, new_responses, payload = self.fixture("1.1.0", "b" * 40)
+        responses.update(new_responses)
+        candidate = copy.deepcopy(entry)
+        candidate["versions"].insert(0, new_entry["versions"][0])
+        # Even a matching snapshot for the candidate is not evidence of an earlier review.
+        unreviewed = build_catalog([new_entry], [], responses.__getitem__)
+        previous["plugins"][0]["versions"].extend(unreviewed["plugins"][0]["versions"])
+        observed = []
+
+        def current_validator(package):
+            """Record the new ZIP and expose its typed admission failure to the caller."""
+            observed.append(package)
+            raise ValueError("current validator rejected candidate")
+
+        with self.assertRaisesRegex(ValueError, "current validator rejected candidate"):
+            build_catalog([candidate], [entry], responses.__getitem__,
+                          validate=current_validator, baseline_catalog=previous)
+        self.assertEqual(observed, [payload])
+
+    def test_mismatched_snapshot_cannot_bypass_current_validator(self):
+        """Only a matching source, digest and manifest identity may preserve prior review."""
+        entry, responses, _ = self.fixture()
+        previous = build_catalog([entry], [], responses.__getitem__)
+
+        def current_validator(payload):
+            """Make accidental fallback suppression observable without executing a guest."""
+            raise ValueError("current admission required")
+
+        for field in ("sha256", "commit", "manifest", "version", "manifest_version"):
+            with self.subTest(field=field):
+                changed = copy.deepcopy(previous)
+                version = changed["plugins"][0]["versions"][0]
+                if field == "manifest_version":
+                    version["manifest"]["version"] = "0.9.0"
+                else:
+                    version[field] = {"id": "another", "version": "1.0.0"} if field == "manifest" else "different"
+                with self.assertRaisesRegex(ValueError, "current admission required"):
+                    build_catalog([entry], [entry], responses.__getitem__,
+                                  validate=current_validator, baseline_catalog=changed)
 
     def test_reject_upstream_mutation_unstable_or_non_open_release(self):
         entry, responses, _ = self.fixture()

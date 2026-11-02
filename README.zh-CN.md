@@ -37,6 +37,9 @@ python marketplace.py --output dist
 python market_statistics.py --catalog dist/catalog.json --previous-url https://nanobug-editor.github.io/Plugin-Marketplace/stats.json --output dist/stats.json
 ```
 
+宿主能力升级时，未变化的已审核版本保留经身份、来源和摘要核对的正式快照。每个新增版本
+仍须通过当前 Package 校验；仅在目录里出现的快照不能作为已审核证明。
+
 通过 PR 提交[注册记录](registry/README.md)，每个版本均需人工审核。[归属转移](transfers/README.md)单独审核。PR 校验使用基线构建器及固定 Nanobug `Package` 校验器，不运行访客代码。在 Nanobug 仓库检出 `.github/validator.json` 固定的提交，以 `cargo build --locked -p plugin-runtime --example inspect_package` 构建校验器。
 
 Actions 向可信构建器提供只读 `GH_TOKEN`，仅用于 `https://api.github.com` 的公开元数据。API 重定向必须保持同一来源，Release ZIP 请求不携带该凭据。本地验证也可不提供凭据，但会受到 GitHub 未认证 API 限流约束。
