@@ -1,0 +1,26 @@
+{
+  "id": "maven",
+  "repository": "Nanobug-Editor/Maven",
+  "maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ],
+  "summary": "Maven project import, discovery and project commands through public host services.",
+  "category": "tools",
+  "tags": [
+    "maven",
+    "java",
+    "build"
+  ],
+  "versions": [
+    {
+      "version": "0.1.19",
+      "commit": "52cf81bb8da5cbe49dfaf53f14c65734df624ed9",
+      "tag": "v0.1.19",
+      "asset": "maven-0.1.19.zip",
+      "published_at": "2026-11-02T03:21:45Z",
+      "changelog": "Maven 0.1.19，与 [Nanobug 内部测试版 0.1.0-internal.20261102.2](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261102.2) 配套验证的独立插件包。\n\n随包 Windows 原生辅助程序已静态链接运行库，导入表复核通过，无需额外安装 Visual C++ 运行库。\n\n实际包离线项目导入回归通过。 所有包均通过宿主公开 `--plugin-package` 与 `--plugin-check`。这不代表全部交互和语言服务器矩阵均已重验。语言工具及其运行环境继续按插件已有授权流程准备。\n\n源码：[固定提交](https://github.com/Nanobug-Editor/Maven/commit/52cf81bb8da5cbe49dfaf53f14c65734df624ed9) `52cf81bb8da5cbe49dfaf53f14c65734df624ed9`。\n公开 SDK 来源：`Nanobug-Editor/Editor@845e2f95389457f7635a913fe670e4a9c3293027`。\n\n下载 `maven-0.1.19.zip`，在编辑器插件管理器中安装；附件 `.sha256` 可用于完整性校验。\n\nSHA-256：`37aabd02a5377e9172cc056ca90a7e0892b7e54f814f291e74afd09ac3565726`\n\n市场目录收录和版本索引继续单独审核，本次不自动批准或更新 registry。\n",
+      "sha256": "37aabd02a5377e9172cc056ca90a7e0892b7e54f814f291e74afd09ac3565726"
+    }
+  ]
+}

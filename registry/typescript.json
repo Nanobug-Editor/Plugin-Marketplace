@@ -1,0 +1,26 @@
+{
+  "id": "typescript",
+  "repository": "Nanobug-Editor/TypeScript",
+  "maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ],
+  "summary": "TypeScript language services, project-aware engine selection and public service contracts.",
+  "category": "languages",
+  "tags": [
+    "typescript",
+    "javascript",
+    "language"
+  ],
+  "versions": [
+    {
+      "version": "0.1.18",
+      "commit": "770af0cf3818ce3960992e6909dccb1349aad9b1",
+      "tag": "v0.1.18",
+      "asset": "typescript-0.1.18.zip",
+      "published_at": "2026-11-02T03:22:32Z",
+      "changelog": "TypeScript 0.1.18，与 [Nanobug 内部测试版 0.1.0-internal.20261102.2](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261102.2) 配套验证的独立插件包。\n\n通过当前公开 SDK 的构建或声明资源准入；保留现有安装 ID、权限和能力声明。\n\n1 项访客单元测试通过；与 Vue 的实际语法包组合两项回归通过。 所有包均通过宿主公开 `--plugin-package` 与 `--plugin-check`。这不代表全部交互和语言服务器矩阵均已重验。语言工具及其运行环境继续按插件已有授权流程准备。\n\n源码：[固定提交](https://github.com/Nanobug-Editor/TypeScript/commit/770af0cf3818ce3960992e6909dccb1349aad9b1) `770af0cf3818ce3960992e6909dccb1349aad9b1`。\n公开 SDK 来源：`Nanobug-Editor/Editor@845e2f95389457f7635a913fe670e4a9c3293027`。\n\n下载 `typescript-0.1.18.zip`，在编辑器插件管理器中安装；附件 `.sha256` 可用于完整性校验。\n\nSHA-256：`20944532fc6f1d86bfbce528a1bb0b40687dcfec55314ff170b8da14320e87cc`\n\n市场目录收录和版本索引继续单独审核，本次不自动批准或更新 registry。\n",
+      "sha256": "20944532fc6f1d86bfbce528a1bb0b40687dcfec55314ff170b8da14320e87cc"
+    }
+  ]
+}

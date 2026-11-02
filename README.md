@@ -11,7 +11,7 @@ Tickets 01–04 are implemented and verified: reviewed native installation, vers
 - An in-editor marketplace for discovery, downloads, download counts, version history and compatible-version installation.
 - Public, open-source plugins submitted through reviewed pull requests.
 - Static registry data on GitHub Pages; plugin ZIPs on each author's GitHub Releases.
-- Seven independently maintained official plugins; no bundled plugins in the final editor distribution.
+- Twelve independently maintained official plugins; no bundled plugins in the final editor distribution.
 - No separate marketplace website, ratings, payments, private plugin sources or extra backend.
 
 ## Documentation

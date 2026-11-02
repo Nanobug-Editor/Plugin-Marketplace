@@ -1,0 +1,26 @@
+{
+  "id": "git",
+  "repository": "Nanobug-Editor/Git",
+  "maintainers": [
+    "Nanobug-Editor",
+    "T-miracle"
+  ],
+  "summary": "Native Git status, staging, comparisons, history and controlled repository operations.",
+  "category": "tools",
+  "tags": [
+    "git",
+    "version-control",
+    "diff"
+  ],
+  "versions": [
+    {
+      "version": "0.1.54",
+      "commit": "7c638cfdd3601d4b8e976379278900fe767e674a",
+      "tag": "v0.1.54",
+      "asset": "git-0.1.54.zip",
+      "published_at": "2026-11-02T04:29:17Z",
+      "changelog": "Git 0.1.54 补齐市场收录所需的许可证和包说明。\n\n沿用 Cargo.toml 已声明的 MIT，新增独立 LICENSE，并将许可证和中英文 README 纳入 ZIP。安装 ID、权限、能力和原生辅助程序保持原样；Windows 辅助程序继续使用静态运行库，无需额外安装 VC++ 运行库。\n\n验证：格式检查、258 项访客单元测试、实际包安装/卸载与重新打开生命周期回归、公开 Package 准入均通过。市场登记通过单独的 registry PR 处理。\n\n源码固定于 `7c638cfdd3601d4b8e976379278900fe767e674a`；公开 SDK 来源 `Nanobug-Editor/Editor@845e2f95389457f7635a913fe670e4a9c3293027`。\n\n下载 `git-0.1.54.zip`，在编辑器插件管理器安装；附带完整 SHA-256 校验文件。\n\nSHA-256：`90703755fd398e5f7a10017dbe248ca593e847b7c88277880a49638e681e609c`\n\n既有 0.1.53 标签和附件保持原始字节。\n",
+      "sha256": "90703755fd398e5f7a10017dbe248ca593e847b7c88277880a49638e681e609c"
+    }
+  ]
+}
