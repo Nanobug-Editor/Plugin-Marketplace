@@ -16,6 +16,7 @@
 | 工单 04 最终证据 | [无随附 Windows 交付验收](verification/04-unbundled-delivery-2026-10-11.md) |
 | 组织迁移：旧仓删除前覆盖核对 | [历史提交、Release 资产与议题元数据](verification/organization-migration-legacy-audit.json) |
 | 发布数据契约 | [目录、撤回与统计](specs/static-data-contract.md) |
+| 官方新版收录候选 | [十二个固定版本的来源、权限与验证](verification/official-releases-2026-11-02.md) |
 | 仓库规范 | [AGENTS.md](../AGENTS.md) |
 
 后续验收进入 docs/verification 并从对应工单链接。方案、工单和证据分别维护，不复制 Nanobug 宿主与独立插件的业务文档。文档在 GitHub 可阅读，但不作为独立市场网页发布。

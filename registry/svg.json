@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.6.3",
+      "commit": "7659ce57763c3945df7f35ba44e0cf7c88c989b0",
+      "tag": "v0.6.3",
+      "asset": "svg-0.6.3.zip",
+      "published_at": "2026-11-02T03:22:21Z",
+      "changelog": "Image 0.6.3，与 [Nanobug 内部测试版 0.1.0-internal.20261102.2](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261102.2) 配套验证的独立插件包。\n\n通过当前公开 SDK 的构建或声明资源准入；保留现有安装 ID、权限和能力声明。\n\n8 项访客单元测试通过；实际 WASM 文件资源与权限回归通过。 所有包均通过宿主公开 `--plugin-package` 与 `--plugin-check`。这不代表全部交互和语言服务器矩阵均已重验。语言工具及其运行环境继续按插件已有授权流程准备。\n\n源码：[固定提交](https://github.com/Nanobug-Editor/Image/commit/7659ce57763c3945df7f35ba44e0cf7c88c989b0) `7659ce57763c3945df7f35ba44e0cf7c88c989b0`。\n公开 SDK 来源：`Nanobug-Editor/Editor@845e2f95389457f7635a913fe670e4a9c3293027`。\n\n下载 `svg-0.6.3.zip`，在编辑器插件管理器中安装；附件 `.sha256` 可用于完整性校验。\n\nSHA-256：`34bc13ecf2c848b612aeefd8c26afc6ca89cb7103e06825d701aef63130ec8a7`\n\n市场目录收录和版本索引继续单独审核，本次不自动批准或更新 registry。\n",
+      "sha256": "34bc13ecf2c848b612aeefd8c26afc6ca89cb7103e06825d701aef63130ec8a7"
+    },
+    {
       "version": "0.6.1",
       "commit": "cac09895b6bc9cd227a6e318edb8c868da41084e",
       "tag": "v0.6.1",
