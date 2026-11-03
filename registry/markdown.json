@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.18.8",
+      "commit": "f0fbb1415e26989d2235d68cb1df07e80fd2c8c2",
+      "tag": "v0.18.8",
+      "asset": "markdown-0.18.8.zip",
+      "published_at": "2026-11-03T04:30:00Z",
+      "changelog": "Markdown 0.18.8\n\n为本轮宿主滚动与通用 UI 优化重新发布版本包；插件业务源码保持原有行为。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`markdown-0.18.8.zip`\n- SHA-256：`9325a0f9c400e77f9cec3044c8e36fb1669744e6ca64b6fe61f023fd50d9b384`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`f0fbb1415e26989d2235d68cb1df07e80fd2c8c2`\n",
+      "sha256": "9325a0f9c400e77f9cec3044c8e36fb1669744e6ca64b6fe61f023fd50d9b384"
+    },
+    {
       "version": "0.18.7",
       "commit": "afb21d2d716972ea29c7fd7eb4feeff396fc67d9",
       "tag": "v0.18.7",

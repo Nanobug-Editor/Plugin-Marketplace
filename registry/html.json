@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.3.3",
+      "commit": "fc2292a2040678ea420afae813bc8f12f2e53b0a",
+      "tag": "v0.3.3",
+      "asset": "html-0.3.3.zip",
+      "published_at": "2026-11-03T04:29:48Z",
+      "changelog": "HTML 0.3.3\n\n为 Nanobug 本轮宿主整合重新构建并发布版本包；本版本仅提升发行版本，未增加插件业务功能。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`html-0.3.3.zip`\n- SHA-256：`81c6d3f63ec661c8f4e27dda078885226950aac9753c9829e046affe3ebf5a3f`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`fc2292a2040678ea420afae813bc8f12f2e53b0a`\n",
+      "sha256": "81c6d3f63ec661c8f4e27dda078885226950aac9753c9829e046affe3ebf5a3f"
+    },
+    {
       "version": "0.3.2",
       "commit": "fbf8dade18b962ed662e97b04b21491f97743cf5",
       "tag": "v0.3.2",

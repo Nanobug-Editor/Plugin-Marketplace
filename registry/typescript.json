@@ -14,6 +14,15 @@
   ],
   "versions": [
     {
+      "version": "0.1.19",
+      "commit": "a32df805030a8ed3efb332feb3e4af7dcc976e9b",
+      "tag": "v0.1.19",
+      "asset": "typescript-0.1.19.zip",
+      "published_at": "2026-11-03T04:30:14Z",
+      "changelog": "TypeScript 0.1.19\n\n将主分析角色限定到 TypeScript 和 TSX，保持配置项目和推断项目的公开服务。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`typescript-0.1.19.zip`\n- SHA-256：`9ea80e0850137b6ac0c7287ec47917b69da6dfb5d8f38a4e3eabca3994f0892d`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`a32df805030a8ed3efb332feb3e4af7dcc976e9b`\n",
+      "sha256": "9ea80e0850137b6ac0c7287ec47917b69da6dfb5d8f38a4e3eabca3994f0892d"
+    },
+    {
       "version": "0.1.18",
       "commit": "770af0cf3818ce3960992e6909dccb1349aad9b1",
       "tag": "v0.1.18",

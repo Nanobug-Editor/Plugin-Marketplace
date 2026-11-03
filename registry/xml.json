@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.2.4",
+      "commit": "6d16fac67b0de969925d90c2c41c159e89def68d",
+      "tag": "v0.2.4",
+      "asset": "xml-0.2.4.zip",
+      "published_at": "2026-11-03T04:30:19Z",
+      "changelog": "XML 0.2.4\n\n为 Nanobug 本轮宿主整合重新构建并发布版本包；本版本仅提升发行版本，未增加插件业务功能。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`xml-0.2.4.zip`\n- SHA-256：`a383f8b9e1b47d14f4afbcb3a88d9f9df6dcd1987b316bdb920d903880f7b2cf`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`6d16fac67b0de969925d90c2c41c159e89def68d`\n",
+      "sha256": "a383f8b9e1b47d14f4afbcb3a88d9f9df6dcd1987b316bdb920d903880f7b2cf"
+    },
+    {
       "version": "0.2.3",
       "commit": "a9cc1059cbb89cab8da95078ec86d3b359486615",
       "tag": "v0.2.3",
