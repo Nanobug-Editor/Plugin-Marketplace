@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.6.4",
+      "commit": "8e7859feb3c1edca16c1c6b64ac96d61b874732d",
+      "tag": "v0.6.4",
+      "asset": "svg-0.6.4.zip",
+      "published_at": "2026-11-03T04:29:51Z",
+      "changelog": "Image 0.6.4\n\n为 Nanobug 本轮宿主整合重新构建并发布版本包；本版本仅提升发行版本，未增加插件业务功能。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`svg-0.6.4.zip`\n- SHA-256：`d34ef97165afb81333ed56581c19f3c3fb810676b2ca0be38c0da4b2468faf62`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`8e7859feb3c1edca16c1c6b64ac96d61b874732d`\n",
+      "sha256": "d34ef97165afb81333ed56581c19f3c3fb810676b2ca0be38c0da4b2468faf62"
+    },
+    {
       "version": "0.6.3",
       "commit": "7659ce57763c3945df7f35ba44e0cf7c88c989b0",
       "tag": "v0.6.3",

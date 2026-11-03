@@ -14,6 +14,15 @@
   ],
   "versions": [
     {
+      "version": "0.1.36",
+      "commit": "503dfa46895300f6e7d7aa28b74f5e1666515b83",
+      "tag": "v0.1.36",
+      "asset": "java-0.1.36.zip",
+      "published_at": "2026-11-03T04:29:54Z",
+      "changelog": "Java 0.1.36\n\n为 Nanobug 本轮宿主整合重新构建并发布版本包；本版本仅提升发行版本，未增加插件业务功能。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`java-0.1.36.zip`\n- SHA-256：`3fa63626f3f6d6cbe29d7c8e12e6611f44cb6104a8007d084e5f56af0881e55c`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`503dfa46895300f6e7d7aa28b74f5e1666515b83`\n",
+      "sha256": "3fa63626f3f6d6cbe29d7c8e12e6611f44cb6104a8007d084e5f56af0881e55c"
+    },
+    {
       "version": "0.1.35",
       "commit": "fe9fc149486435369392aabe6641ae032a7495c3",
       "tag": "v0.1.35",

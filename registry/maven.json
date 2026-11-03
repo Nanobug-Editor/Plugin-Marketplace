@@ -14,6 +14,15 @@
   ],
   "versions": [
     {
+      "version": "0.1.20",
+      "commit": "c4e08e4eca2a45fcbf4dfa2d86013c4121cc0b5c",
+      "tag": "v0.1.20",
+      "asset": "maven-0.1.20.zip",
+      "published_at": "2026-11-03T04:30:05Z",
+      "changelog": "Maven 0.1.20\n\n为 Nanobug 本轮宿主整合重新构建并发布版本包；本版本仅提升发行版本，未增加插件业务功能。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`maven-0.1.20.zip`\n- SHA-256：`8a9e31e9f6f0c8ff51aee00d46e0f5b5b6f17b7517d59f08e850415c371e314d`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`c4e08e4eca2a45fcbf4dfa2d86013c4121cc0b5c`\n",
+      "sha256": "8a9e31e9f6f0c8ff51aee00d46e0f5b5b6f17b7517d59f08e850415c371e314d"
+    },
+    {
       "version": "0.1.19",
       "commit": "52cf81bb8da5cbe49dfaf53f14c65734df624ed9",
       "tag": "v0.1.19",

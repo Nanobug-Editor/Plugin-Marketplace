@@ -13,6 +13,15 @@
   ],
   "versions": [
     {
+      "version": "0.4.0",
+      "commit": "430a0600159a97f356068d9f4da2297536dfc78e",
+      "tag": "v0.4.0",
+      "asset": "javascript-0.4.0.zip",
+      "published_at": "2026-11-03T04:29:57Z",
+      "changelog": "JavaScript 0.4.0\n\n独立解析 import 并提供定义跳转与悬浮信息，不要求启用 TypeScript 插件。\n\n通过公开 `--plugin-package` 构建及 `--plugin-check` 完整校验。插件独立安装，宿主安装包不随附插件。\n\n- ZIP：`javascript-0.4.0.zip`\n- SHA-256：`1aaaac101b326ff4d77e77bb7e5a817d6ca018c6a364116a54ec006167b44d46`\n- 宿主：[v0.1.0-internal.20261103](https://github.com/Nanobug-Editor/Editor/releases/tag/v0.1.0-internal.20261103)\n\n源码提交：`430a0600159a97f356068d9f4da2297536dfc78e`\n",
+      "sha256": "1aaaac101b326ff4d77e77bb7e5a817d6ca018c6a364116a54ec006167b44d46"
+    },
+    {
       "version": "0.3.2",
       "commit": "ed583ee1dda00b80245a8fb7d7fdf674417c8da1",
       "tag": "v0.3.2",
